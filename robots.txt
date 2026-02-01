@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://latelierdesmemoires.netlify.app/sitemap.xml
