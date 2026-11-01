@@ -1,0 +1,861 @@
+{
+  "101": [
+    {
+      "alt": "Carnet original de 1918 — Croquis de guerre et de mode — photographie 1 sur 8",
+      "variants": [
+        {
+          "src": "/assets/images/carnet-original-1918-1-160.webp",
+          "width": 160,
+          "height": 213
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-1-320.webp",
+          "width": 320,
+          "height": 427
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-1-600.webp",
+          "width": 600,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "alt": "Carnet original de 1918 — Croquis de guerre et de mode — photographie 2 sur 8",
+      "variants": [
+        {
+          "src": "/assets/images/carnet-original-1918-2-160.webp",
+          "width": 160,
+          "height": 113
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-2-320.webp",
+          "width": 320,
+          "height": 226
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-2-640.webp",
+          "width": 640,
+          "height": 453
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-2-1131.webp",
+          "width": 1131,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "alt": "Carnet original de 1918 — Croquis de guerre et de mode — photographie 3 sur 8",
+      "variants": [
+        {
+          "src": "/assets/images/carnet-original-1918-3-160.webp",
+          "width": 160,
+          "height": 209
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-3-320.webp",
+          "width": 320,
+          "height": 418
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-3-612.webp",
+          "width": 612,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "alt": "Carnet original de 1918 — Croquis de guerre et de mode — photographie 4 sur 8",
+      "variants": [
+        {
+          "src": "/assets/images/carnet-original-1918-4-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-4-320.webp",
+          "width": 320,
+          "height": 240
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-4-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-4-1067.webp",
+          "width": 1067,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "alt": "Carnet original de 1918 — Croquis de guerre et de mode — photographie 5 sur 8",
+      "variants": [
+        {
+          "src": "/assets/images/carnet-original-1918-5-160.webp",
+          "width": 160,
+          "height": 213
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-5-320.webp",
+          "width": 320,
+          "height": 427
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-5-600.webp",
+          "width": 600,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "alt": "Carnet original de 1918 — Croquis de guerre et de mode — photographie 6 sur 8",
+      "variants": [
+        {
+          "src": "/assets/images/carnet-original-1918-6-160.webp",
+          "width": 160,
+          "height": 114
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-6-320.webp",
+          "width": 320,
+          "height": 227
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-6-640.webp",
+          "width": 640,
+          "height": 454
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-6-1127.webp",
+          "width": 1127,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "alt": "Carnet original de 1918 — Croquis de guerre et de mode — photographie 7 sur 8",
+      "variants": [
+        {
+          "src": "/assets/images/carnet-original-1918-7-160.webp",
+          "width": 160,
+          "height": 122
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-7-320.webp",
+          "width": 320,
+          "height": 244
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-7-596.webp",
+          "width": 596,
+          "height": 455
+        }
+      ]
+    },
+    {
+      "alt": "Carnet original de 1918 — Croquis de guerre et de mode — photographie 8 sur 8",
+      "variants": [
+        {
+          "src": "/assets/images/carnet-original-1918-8-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-8-320.webp",
+          "width": 320,
+          "height": 240
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-8-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-8-1067.webp",
+          "width": 1067,
+          "height": 800
+        }
+      ]
+    }
+  ],
+  "102": [
+    {
+      "alt": "Notre Belle Patrie — Sites pittoresques de la France — photographie 1 sur 3",
+      "variants": [
+        {
+          "src": "/assets/images/notre-belle-patrie-1-160.webp",
+          "width": 160,
+          "height": 215
+        },
+        {
+          "src": "/assets/images/notre-belle-patrie-1-320.webp",
+          "width": 320,
+          "height": 431
+        },
+        {
+          "src": "/assets/images/notre-belle-patrie-1-594.webp",
+          "width": 594,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "alt": "Notre Belle Patrie — Sites pittoresques de la France — photographie 2 sur 3",
+      "variants": [
+        {
+          "src": "/assets/images/notre-belle-patrie-2-160.webp",
+          "width": 160,
+          "height": 232
+        },
+        {
+          "src": "/assets/images/notre-belle-patrie-2-320.webp",
+          "width": 320,
+          "height": 464
+        },
+        {
+          "src": "/assets/images/notre-belle-patrie-2-552.webp",
+          "width": 552,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "alt": "Notre Belle Patrie — Sites pittoresques de la France — photographie 3 sur 3",
+      "variants": [
+        {
+          "src": "/assets/images/notre-belle-patrie-3-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/assets/images/notre-belle-patrie-3-320.webp",
+          "width": 320,
+          "height": 240
+        },
+        {
+          "src": "/assets/images/notre-belle-patrie-3-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/notre-belle-patrie-3-800.webp",
+          "width": 800,
+          "height": 600
+        }
+      ]
+    }
+  ],
+  "103": [
+    {
+      "alt": "L’Homme depuis cinq mille ans — photographie 1 sur 2",
+      "variants": [
+        {
+          "src": "/assets/images/homme-depuis-cinq-mille-ans-1-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/assets/images/homme-depuis-cinq-mille-ans-1-320.webp",
+          "width": 320,
+          "height": 240
+        },
+        {
+          "src": "/assets/images/homme-depuis-cinq-mille-ans-1-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/homme-depuis-cinq-mille-ans-1-800.webp",
+          "width": 800,
+          "height": 600
+        }
+      ]
+    },
+    {
+      "alt": "L’Homme depuis cinq mille ans — photographie 2 sur 2",
+      "variants": [
+        {
+          "src": "/assets/images/homme-depuis-cinq-mille-ans-2-160.webp",
+          "width": 160,
+          "height": 91
+        },
+        {
+          "src": "/assets/images/homme-depuis-cinq-mille-ans-2-320.webp",
+          "width": 320,
+          "height": 182
+        },
+        {
+          "src": "/assets/images/homme-depuis-cinq-mille-ans-2-640.webp",
+          "width": 640,
+          "height": 363
+        },
+        {
+          "src": "/assets/images/homme-depuis-cinq-mille-ans-2-800.webp",
+          "width": 800,
+          "height": 454
+        }
+      ]
+    }
+  ],
+  "104": [
+    {
+      "alt": "Contes bleus — photographie 1 sur 6",
+      "variants": [
+        {
+          "src": "/assets/images/contes-bleus-1-160.webp",
+          "width": 160,
+          "height": 160
+        },
+        {
+          "src": "/assets/images/contes-bleus-1-320.webp",
+          "width": 320,
+          "height": 320
+        },
+        {
+          "src": "/assets/images/contes-bleus-1-640.webp",
+          "width": 640,
+          "height": 640
+        },
+        {
+          "src": "/assets/images/contes-bleus-1-1024.webp",
+          "width": 1024,
+          "height": 1024
+        }
+      ]
+    },
+    {
+      "alt": "Contes bleus — photographie 2 sur 6",
+      "variants": [
+        {
+          "src": "/assets/images/contes-bleus-2-160.webp",
+          "width": 160,
+          "height": 213
+        },
+        {
+          "src": "/assets/images/contes-bleus-2-320.webp",
+          "width": 320,
+          "height": 427
+        },
+        {
+          "src": "/assets/images/contes-bleus-2-640.webp",
+          "width": 640,
+          "height": 853
+        },
+        {
+          "src": "/assets/images/contes-bleus-2-1200.webp",
+          "width": 1200,
+          "height": 1600
+        }
+      ]
+    },
+    {
+      "alt": "Contes bleus — photographie 3 sur 6",
+      "variants": [
+        {
+          "src": "/assets/images/contes-bleus-3-160.webp",
+          "width": 160,
+          "height": 240
+        },
+        {
+          "src": "/assets/images/contes-bleus-3-320.webp",
+          "width": 320,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/contes-bleus-3-640.webp",
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "/assets/images/contes-bleus-3-1024.webp",
+          "width": 1024,
+          "height": 1536
+        }
+      ]
+    },
+    {
+      "alt": "Contes bleus — photographie 4 sur 6",
+      "variants": [
+        {
+          "src": "/assets/images/contes-bleus-4-160.webp",
+          "width": 160,
+          "height": 213
+        },
+        {
+          "src": "/assets/images/contes-bleus-4-320.webp",
+          "width": 320,
+          "height": 427
+        },
+        {
+          "src": "/assets/images/contes-bleus-4-640.webp",
+          "width": 640,
+          "height": 854
+        },
+        {
+          "src": "/assets/images/contes-bleus-4-1200.webp",
+          "width": 1200,
+          "height": 1600
+        }
+      ]
+    },
+    {
+      "alt": "Contes bleus — photographie 5 sur 6",
+      "variants": [
+        {
+          "src": "/assets/images/contes-bleus-5-160.webp",
+          "width": 160,
+          "height": 213
+        },
+        {
+          "src": "/assets/images/contes-bleus-5-320.webp",
+          "width": 320,
+          "height": 427
+        },
+        {
+          "src": "/assets/images/contes-bleus-5-640.webp",
+          "width": 640,
+          "height": 853
+        },
+        {
+          "src": "/assets/images/contes-bleus-5-1200.webp",
+          "width": 1200,
+          "height": 1600
+        }
+      ]
+    },
+    {
+      "alt": "Contes bleus — photographie 6 sur 6",
+      "variants": [
+        {
+          "src": "/assets/images/contes-bleus-6-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/assets/images/contes-bleus-6-320.webp",
+          "width": 320,
+          "height": 240
+        },
+        {
+          "src": "/assets/images/contes-bleus-6-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/contes-bleus-6-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ]
+    }
+  ],
+  "105": [
+    {
+      "alt": "Victor Hugo — Années d’enfance — photographie 1 sur 6",
+      "variants": [
+        {
+          "src": "/assets/images/victor-hugo-annees-enfance-1-160.webp",
+          "width": 160,
+          "height": 240
+        },
+        {
+          "src": "/assets/images/victor-hugo-annees-enfance-1-320.webp",
+          "width": 320,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/victor-hugo-annees-enfance-1-640.webp",
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "/assets/images/victor-hugo-annees-enfance-1-1024.webp",
+          "width": 1024,
+          "height": 1536
+        }
+      ]
+    },
+    {
+      "alt": "Victor Hugo — Années d’enfance — photographie 2 sur 6",
+      "variants": [
+        {
+          "src": "/assets/images/victor-hugo-annees-enfance-2-160.webp",
+          "width": 160,
+          "height": 160
+        },
+        {
+          "src": "/assets/images/victor-hugo-annees-enfance-2-320.webp",
+          "width": 320,
+          "height": 320
+        },
+        {
+          "src": "/assets/images/victor-hugo-annees-enfance-2-640.webp",
+          "width": 640,
+          "height": 640
+        },
+        {
+          "src": "/assets/images/victor-hugo-annees-enfance-2-1024.webp",
+          "width": 1024,
+          "height": 1024
+        }
+      ]
+    },
+    {
+      "alt": "Victor Hugo — Années d’enfance — photographie 3 sur 6",
+      "variants": [
+        {
+          "src": "/assets/images/victor-hugo-annees-enfance-3-160.webp",
+          "width": 160,
+          "height": 213
+        },
+        {
+          "src": "/assets/images/victor-hugo-annees-enfance-3-320.webp",
+          "width": 320,
+          "height": 427
+        },
+        {
+          "src": "/assets/images/victor-hugo-annees-enfance-3-640.webp",
+          "width": 640,
+          "height": 853
+        },
+        {
+          "src": "/assets/images/victor-hugo-annees-enfance-3-1200.webp",
+          "width": 1200,
+          "height": 1600
+        }
+      ]
+    },
+    {
+      "alt": "Victor Hugo — Années d’enfance — photographie 4 sur 6",
+      "variants": [
+        {
+          "src": "/assets/images/victor-hugo-annees-enfance-4-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/assets/images/victor-hugo-annees-enfance-4-320.webp",
+          "width": 320,
+          "height": 240
+        },
+        {
+          "src": "/assets/images/victor-hugo-annees-enfance-4-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/victor-hugo-annees-enfance-4-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "alt": "Victor Hugo — Années d’enfance — photographie 5 sur 6",
+      "variants": [
+        {
+          "src": "/assets/images/victor-hugo-annees-enfance-5-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/assets/images/victor-hugo-annees-enfance-5-320.webp",
+          "width": 320,
+          "height": 240
+        },
+        {
+          "src": "/assets/images/victor-hugo-annees-enfance-5-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/victor-hugo-annees-enfance-5-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "alt": "Victor Hugo — Années d’enfance — photographie 6 sur 6",
+      "variants": [
+        {
+          "src": "/assets/images/victor-hugo-annees-enfance-6-160.webp",
+          "width": 160,
+          "height": 213
+        },
+        {
+          "src": "/assets/images/victor-hugo-annees-enfance-6-320.webp",
+          "width": 320,
+          "height": 427
+        },
+        {
+          "src": "/assets/images/victor-hugo-annees-enfance-6-640.webp",
+          "width": 640,
+          "height": 853
+        },
+        {
+          "src": "/assets/images/victor-hugo-annees-enfance-6-1200.webp",
+          "width": 1200,
+          "height": 1600
+        }
+      ]
+    }
+  ],
+  "106": [
+    {
+      "alt": "Jacques Dumont, roman d’un petit paysan — photographie 1 sur 6",
+      "variants": [
+        {
+          "src": "/assets/images/jacques-dumont-1-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/assets/images/jacques-dumont-1-320.webp",
+          "width": 320,
+          "height": 213
+        },
+        {
+          "src": "/assets/images/jacques-dumont-1-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/assets/images/jacques-dumont-1-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "alt": "Jacques Dumont, roman d’un petit paysan — photographie 2 sur 6",
+      "variants": [
+        {
+          "src": "/assets/images/jacques-dumont-2-160.webp",
+          "width": 160,
+          "height": 240
+        },
+        {
+          "src": "/assets/images/jacques-dumont-2-320.webp",
+          "width": 320,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/jacques-dumont-2-640.webp",
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "/assets/images/jacques-dumont-2-1024.webp",
+          "width": 1024,
+          "height": 1536
+        }
+      ]
+    },
+    {
+      "alt": "Jacques Dumont, roman d’un petit paysan — photographie 3 sur 6",
+      "variants": [
+        {
+          "src": "/assets/images/jacques-dumont-3-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/assets/images/jacques-dumont-3-320.webp",
+          "width": 320,
+          "height": 240
+        },
+        {
+          "src": "/assets/images/jacques-dumont-3-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/jacques-dumont-3-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "alt": "Jacques Dumont, roman d’un petit paysan — photographie 4 sur 6",
+      "variants": [
+        {
+          "src": "/assets/images/jacques-dumont-4-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/assets/images/jacques-dumont-4-320.webp",
+          "width": 320,
+          "height": 240
+        },
+        {
+          "src": "/assets/images/jacques-dumont-4-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/jacques-dumont-4-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "alt": "Jacques Dumont, roman d’un petit paysan — photographie 5 sur 6",
+      "variants": [
+        {
+          "src": "/assets/images/jacques-dumont-5-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/assets/images/jacques-dumont-5-320.webp",
+          "width": 320,
+          "height": 240
+        },
+        {
+          "src": "/assets/images/jacques-dumont-5-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/jacques-dumont-5-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "alt": "Jacques Dumont, roman d’un petit paysan — photographie 6 sur 6",
+      "variants": [
+        {
+          "src": "/assets/images/jacques-dumont-6-160.webp",
+          "width": 160,
+          "height": 213
+        },
+        {
+          "src": "/assets/images/jacques-dumont-6-320.webp",
+          "width": 320,
+          "height": 427
+        },
+        {
+          "src": "/assets/images/jacques-dumont-6-640.webp",
+          "width": 640,
+          "height": 853
+        },
+        {
+          "src": "/assets/images/jacques-dumont-6-1200.webp",
+          "width": 1200,
+          "height": 1600
+        }
+      ]
+    }
+  ],
+  "107": [
+    {
+      "alt": "Le Capitaine Fracasse — photographie 1 sur 4",
+      "variants": [
+        {
+          "src": "/assets/images/capitaine-fracasse-1-160.webp",
+          "width": 160,
+          "height": 240
+        },
+        {
+          "src": "/assets/images/capitaine-fracasse-1-320.webp",
+          "width": 320,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/capitaine-fracasse-1-640.webp",
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "/assets/images/capitaine-fracasse-1-1024.webp",
+          "width": 1024,
+          "height": 1536
+        }
+      ]
+    },
+    {
+      "alt": "Le Capitaine Fracasse — photographie 2 sur 4",
+      "variants": [
+        {
+          "src": "/assets/images/capitaine-fracasse-2-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/assets/images/capitaine-fracasse-2-320.webp",
+          "width": 320,
+          "height": 213
+        },
+        {
+          "src": "/assets/images/capitaine-fracasse-2-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/assets/images/capitaine-fracasse-2-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "alt": "Le Capitaine Fracasse — photographie 3 sur 4",
+      "variants": [
+        {
+          "src": "/assets/images/capitaine-fracasse-3-160.webp",
+          "width": 160,
+          "height": 240
+        },
+        {
+          "src": "/assets/images/capitaine-fracasse-3-320.webp",
+          "width": 320,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/capitaine-fracasse-3-640.webp",
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "/assets/images/capitaine-fracasse-3-1024.webp",
+          "width": 1024,
+          "height": 1536
+        }
+      ]
+    },
+    {
+      "alt": "Le Capitaine Fracasse — photographie 4 sur 4",
+      "variants": [
+        {
+          "src": "/assets/images/capitaine-fracasse-4-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/assets/images/capitaine-fracasse-4-320.webp",
+          "width": 320,
+          "height": 240
+        },
+        {
+          "src": "/assets/images/capitaine-fracasse-4-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/capitaine-fracasse-4-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ]
+    }
+  ]
+}
