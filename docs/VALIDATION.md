@@ -37,6 +37,12 @@ Les totaux de variantes ne sont pas le poids d’une visite : le navigateur choi
 
 Les tests et captures peuvent être reproduits avec les commandes du README. Une analyse axe ne remplace pas un audit humain complet avec lecteur d’écran. Aucun score Lighthouse ni aucune mesure de terrain Core Web Vitals ne sont revendiqués.
 
+## Vérification du déploiement Netlify
+
+Les mêmes parcours navigateur et analyses d’accessibilité ont également réussi sur le [lien immuable du déploiement](https://6ae74ebf63285023c2c85ee6--latelierdesmemoires.netlify.app/). Les en-têtes CSP, X-Content-Type-Options, X-Frame-Options, Referrer-Policy et Permissions-Policy y sont effectivement servis. Le marquage `X-Robots-Tag: noindex` de cet aperçu est présent. Le workflow GitHub Actions a aussi réussi, y compris les tests navigateur et d’accessibilité sur Linux.
+
+Le lien de Deploy Preview avec l’outil de commentaires Netlify a réussi les parcours fonctionnels, mais cet outil injecté provoque des violations CSP de style et d’iframe. Le lien immuable, sans cet outil, réussit aussi le contrôle d’absence d’erreurs CSP. Les protections du site sont conservées.
+
 ## Informations encore nécessaires au propriétaire
 
 Les champs correspondants sont centralisés dans `data/site.json` : statut de vendeur, identité publique, contact et mentions adaptées à ce statut, ainsi que véritable profil Leboncoin pour l’accès aux évaluations. Aucune donnée personnelle n’a été déduite du compte GitHub. Les pages d’information signalent les éléments manquants ; elles ne prétendent pas constituer des mentions ou CGV finalisées.

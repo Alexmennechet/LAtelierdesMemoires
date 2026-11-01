@@ -274,8 +274,8 @@ try {
   assert.deepEqual(failed, []);
   // A deliberate 404 can emit a console resource error; all prior pages must be clean.
   assert.ok(
-    errors.every((err) => err.includes("404 (Not Found)")),
-    JSON.stringify(errors),
+    errors.every((err) => err.includes("server responded with a status of 404")),
+    JSON.stringify([...new Set(errors)]),
   );
   console.log(
     "Search, URLs, gallery, keyboard, focus, dialogs, selection, storage errors, no-JS and headers: passed",

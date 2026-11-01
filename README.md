@@ -63,3 +63,5 @@ Pour régénérer les images : Python avec Pillow et FFmpeg, puis `python script
 `netlify.toml` définit `npm run build` et publie `dist/`. Il configure CSP, protection contre l’intégration en iframe, types MIME, politique de référent et permissions. L’application ne contient ni script exécutable ni style en ligne. Ne pas ajouter une redirection globale vers la page d’accueil : les pages de livres et la vraie page 404 sont statiques.
 
 Après publication, vérifier les pages directes, les en-têtes réellement servis et le sitemap public. Les mesures de terrain et l’état d’indexation exigent les accès Netlify/Search Console ; ils ne sont pas déduits des tests locaux.
+
+Pour tester un déploiement distant, définir `TEST_BASE_URL` avec son URL. Préférer le lien immuable du déploiement : l’outil de commentaires injecté dans les Deploy Previews utilise des styles en ligne et une iframe externe que la CSP bloque. Le lien immuable sert le même site sans cet outil, [comme le documente Netlify](https://docs.netlify.com/deploy/review-deploys/netlify-drawer-for-feedback/troubleshoot-the-netlify-drawer/). La CSP ne doit pas être assouplie pour les besoins d’un outil de revue.
