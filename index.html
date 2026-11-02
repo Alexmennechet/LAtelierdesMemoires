@@ -1461,6 +1461,11 @@
             return null;
         }
 
+        function getListingUrl(book) {
+            const currentBook = books.find(item => item.id === book.id);
+            return currentBook ? safeUrl(currentBook.lb_url) : null;
+        }
+
         let cart = loadCart();
         let currentFilter = 'all';
         let currentSearch = '';
@@ -1568,11 +1573,11 @@ Conditions de vente et garanties régies par Leboncoin.fr`);
                 "name": b.title,
                 "image": (b.images && b.images.length) ? b.images : [b.img],
                 "description": String(b.desc || '').replace(/\s+/g, ' ').trim(),
-                ...(safeUrl(b.lb_url) ? { "offers": {
+                ...(getListingUrl(b) ? { "offers": {
                     "@type": "Offer",
                     "priceCurrency": "EUR",
                     "price": b.price,
-                    "url": safeUrl(b.lb_url)
+                    "url": getListingUrl(b)
                 }} : {}),
                 ...(b.author ? { "author": { "@type": "Person", "name": b.author } } : {}),
                 ...(b.year ? { "datePublished": b.year } : {})
@@ -1653,10 +1658,10 @@ Conditions de vente et garanties régies par Leboncoin.fr`);
             btn.dataset.addToCart = book.id;
 
             bottom.appendChild(price);
-            if (!safeUrl(book.lb_url)) {
+            if (!getListingUrl(book)) {
                 const status = document.createElement('p');
                 status.className = 'listing-status';
-                status.textContent = 'Annonce Leboncoin à venir';
+                status.textContent = 'Lien de l’annonce indisponible.';
                 bottom.appendChild(status);
             }
             bottom.appendChild(btn);
@@ -1729,7 +1734,7 @@ Conditions de vente et garanties régies par Leboncoin.fr`);
             document.getElementById('modal-title').innerText = book.title;
             document.getElementById('modal-price').innerText = book.price.toLocaleString() + ' €';
             const listingStatus = document.getElementById('modal-listing-status');
-            const listingUrl = safeUrl(book.lb_url);
+            const listingUrl = getListingUrl(book);
             listingStatus.textContent = '';
             if (listingUrl) {
                 const listingLink = document.createElement('a');
@@ -1740,7 +1745,7 @@ Conditions de vente et garanties régies par Leboncoin.fr`);
                 listingLink.textContent = 'Voir l’annonce sur Leboncoin ↗';
                 listingStatus.appendChild(listingLink);
             } else {
-                listingStatus.textContent = 'Annonce Leboncoin à venir';
+                listingStatus.textContent = 'Lien de l’annonce indisponible.';
             }
             document.getElementById('modal-desc').innerText = book.desc;
 
@@ -1917,7 +1922,7 @@ Conditions de vente et garanties régies par Leboncoin.fr`);
                 actions.style.alignItems = 'flex-end';
                 actions.style.gap = '10px';
 
-                const listingUrl = safeUrl(item.lb_url);
+                const listingUrl = getListingUrl(item);
                 const link = document.createElement(listingUrl ? 'a' : 'p');
                 if (listingUrl) {
                     link.href = listingUrl;
@@ -1927,7 +1932,7 @@ Conditions de vente et garanties régies par Leboncoin.fr`);
                     link.textContent = 'Consulter l’annonce Leboncoin ↗';
                 } else {
                     link.className = 'listing-status';
-                    link.textContent = 'Annonce Leboncoin à venir. Vous pouvez conserver ce livre dans votre sélection.';
+                    link.textContent = 'Lien de l’annonce indisponible.';
                 }
 
                 const remove = document.createElement('button');
