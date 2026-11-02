@@ -55,6 +55,8 @@ Les pages contact, livraison, informations de publication et confidentialité d�
 
 ## Guides et données structurées
 
+Le jour de publication est connu, mais pas son heure exacte. Les champs DateTime facultatifs du balisage Article sont donc omis : le test Google demande une heure et un fuseau. La date visible et celle du sitemap restent conservées ; aucune heure artificielle n’est ajoutée pour supprimer un avertissement.
+
 Les trois guides affichent leur publication, la marque éditrice et une photographie pertinente déjà conservée dans le catalogue. `data/guides.json` fixe ces dates et la référence de l’illustration ; elles ne sont pas recalculées à chaque build. Lors d’une vraie révision, modifier `updated`, conserver `published` et actualiser le texte visible si la date de modification change. Le générateur réutilise les images sans retouche et leurs légendes observées.
 
 Le graphe JSON-LD distingue le site, chaque page, les livres et les articles. Les guides portent Article et un fil d’Ariane correspondant aux liens visibles ; les catalogues sont des CollectionPage, les fiches des ItemPage et les contacts des ContactPage. Les livres présentés en anglais restent des exemplaires de langue française. Les statuts inconnus ne deviennent pas du stock disponible. Ce balisage ne garantit ni classement ni résultat enrichi. Références : [Google Article](https://developers.google.com/search/docs/appearance/structured-data/article), [fils d’Ariane](https://developers.google.com/search/docs/appearance/structured-data/breadcrumb).

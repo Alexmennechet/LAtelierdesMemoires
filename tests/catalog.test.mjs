@@ -385,8 +385,12 @@ test("guides expose Article and breadcrumbs that match visible dates, publisher 
     const article = nodes.find((node) => hasType(node, "Article"));
     assert.ok(article, guide.slug);
     assert.equal(article.headline, guide.title);
-    assert.equal(article.datePublished, guide.published);
-    assert.equal(article.dateModified, guide.updated);
+    assert.equal(
+      article.datePublished,
+      undefined,
+      "No invented publication time",
+    );
+    assert.equal(article.dateModified, undefined, "No invented revision time");
     assert.equal(article.mainEntityOfPage["@id"], url + "#webpage");
     assert.equal(article.author["@id"], site.url + "/#organization");
     assert.ok(html.includes(`<time datetime="${guide.published}">`));
