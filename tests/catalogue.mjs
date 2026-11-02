@@ -39,4 +39,22 @@ assert.equal(sandbox.safeUrl(null), null);
 assert.equal(sandbox.safeUrl('https://fakeleboncoin.fr/ad/123'), null);
 assert.equal(sandbox.safeUrl('https://leboncoin.fr@evil.test/ad/123'), null);
 assert.equal(sandbox.safeUrl('https://www.leboncoin.fr/ad/livres/123'), 'https://www.leboncoin.fr/ad/livres/123');
-console.log('OK: 19 références, 15 prix = 322 EUR, 100 images, scripts et liens.');
+// A saved selection from before publication must use current catalogue data.
+let savedCart;
+const restored = { URL, localStorage: { getItem: () => JSON.stringify(savedCart) } };
+vm.runInNewContext(scripts[0].slice(0, scripts[0].indexOf('let cart =')), restored);
+for (const legacy of [false, true]) {
+  savedCart = Object.keys(expected).map(Number).map(id => legacy
+    ? { id, lb_url: null, desc: 'Annonce Leboncoin à venir', price: 1 }
+    : id);
+  const selection = restored.loadCart();
+  assert.equal(selection.length, 15);
+  selection.forEach(book => assert.deepEqual(JSON.parse(JSON.stringify(book)), books.find(b => b.id === book.id)));
+}
+for (const book of books) {
+  assert.equal(restored.getListingUrl({ ...book, lb_url: null }), book.lb_url);
+  assert.equal(restored.getListingUrl({ ...book, lb_url: 'https://evil.test' }), book.lb_url);
+}
+assert.equal(restored.getListingUrl({ id: -1, lb_url: books[0].lb_url }), null);
+assert.ok(!html.includes('Annonce Leboncoin à venir'));
+console.log('OK: catalogue, 100 images, 19 liens et migration des sélections anciennes.');

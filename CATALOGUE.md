@@ -59,3 +59,9 @@ Les dates certaines sont 1893 (Berthe), 1949 (Nils) et 1934 (Quentin). Les autre
 Exécuter `node tests/catalogue.mjs`. Ce contrôle ne nécessite pas de dépendance et vérifie les 19 références, les 15 prix, les 100 images et leurs variantes locales, les liens uniques vers Leboncoin et la validité des scripts.
 
 La branche `codex/ameliorations-site` et la proposition antérieure restent distinctes. Avant de fusionner cette refonte, reprendre les présentes données et galeries dans son format `data/books.json` / `data/media.json` pour conserver ce catalogue.
+
+## Sélections enregistrées et cache
+
+Les liens affichés sont résolus depuis le catalogue courant à partir de l’identifiant du livre, y compris si une ancienne copie du livre subsiste dans une sélection. Les sélections enregistrées sous forme d’identifiants ou d’anciens objets sont rechargées avec les informations actuelles. Le message de secours indique uniquement « Lien de l’annonce indisponible. » si aucun lien valide n’existe dans le catalogue.
+
+Le fichier Netlify `_headers` désactive la conservation de la page HTML pour `/` et `/index.html`. Les images conservent leur politique de cache. Un onglet ouvert avant une publication doit être actualisé une fois pour charger le nouveau code.
