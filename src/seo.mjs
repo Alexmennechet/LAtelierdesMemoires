@@ -101,8 +101,8 @@ export function pageGraph({
       mainEntityOfPage: { "@id": pageId },
       author: { "@id": organizationId },
       publisher: { "@id": organizationId },
-      datePublished: guide.published,
-      dateModified: guide.updated,
+      // Only the publication day is documented. Keep it in visible HTML and
+      // the sitemap, rather than inventing the DateTime expected by Google.
       image: site.url + guide.image.variants.at(-1).src,
     });
   if (book || guide)
