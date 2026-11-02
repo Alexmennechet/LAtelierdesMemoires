@@ -30,6 +30,20 @@ Les prix ci-dessous reprennent le champ « Prix de présentation conseillé » d
 
 Total des 15 prix : **322 €**, pour 16 volumes physiques et 100 images finales. Le lot Coppée est une sélection de deux tomes des Œuvres complètes, pas une collection complète.
 
+## Ajout du 2 novembre 2026 (soir) : ADM-120 à ADM-122
+
+Trois fiches ajoutées, soit 22 fiches au total. Prix repris du champ « Prix de présentation conseillé » des fiches bibliographiques du 2 novembre 2026 ; annonces Leboncoin publiées le même jour.
+
+| Référence | Livre | Prix | Images | Annonce Leboncoin |
+|---|---|---:|---:|---|
+| ADM-120 | Contribution à l’histoire de l’Hôpital de Versailles (Munsch, 1933) | 20 € | 7 | https://www.leboncoin.fr/ad/livres/3301253898 |
+| ADM-121 | Arsène Lupin contre Herlock Sholmès + Les Confidences d’Arsène Lupin (lot de 2) | 25 € | 5 | https://www.leboncoin.fr/ad/livres/3301255411 |
+| ADM-122 | L’Affaire Crainquebille, fac-similé de l’édition Pelletan de 1901 | 15 € | 6 | https://www.leboncoin.fr/ad/livres/3301256237 |
+
+Images : vues choisies par le propriétaire à la racine des trois dossiers (mises en scène retravaillées à partir des photos d’origine, conservées dans `Archive/`). Une vue intérieure de Munsch dont le texte imprimé ne correspondait pas au livre, et le collage Lupin, ont été écartés. WebP 160 / 640 / 1200 px, qualité 90 pour la grande variante. L’état décrit dans les fiches repose sur les photos d’origine. ADM-122 est une réimpression moderne : la date 1901 n’est pas inscrite comme date de publication.
+
+Ces trois références sont contrôlées par le test « references added after the baseline » ; les 19 références d’origine gardent leurs contrôles figés.
+
 ## Mise à jour des liens Leboncoin
 
 Les 15 livres sont désormais publiés sur le compte L’Atelier des Mémoires : quatre nouvelles annonces et onze annonces existantes actualisées. Leurs liens et prix ont été vérifiés sur le compte le 2 novembre 2026. Les 15 champs `lb_url` sont renseignés et les anciennes mentions « Annonce Leboncoin à venir » sont retirées des descriptions. Les liens sont accessibles directement dans les fiches et depuis la sélection. Aucune disponibilité en stock n’est déduite de ces liens.

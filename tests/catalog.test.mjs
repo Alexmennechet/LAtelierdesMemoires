@@ -68,17 +68,32 @@ const distFile = (src) =>
   );
 
 // Frozen production data protects the user's prices, exact listings and final photographs.
+// References added after the frozen baseline: [price, photos, Leboncoin listing].
+const added = {
+  120: [20, 7, "https://www.leboncoin.fr/ad/livres/3301253898"],
+  121: [25, 5, "https://www.leboncoin.fr/ad/livres/3301255411"],
+  122: [15, 6, "https://www.leboncoin.fr/ad/livres/3301256237"],
+};
+
 test("19 references preserve production IDs, prices, exact Leboncoin links and 100 final photos", async () => {
-  assert.equal(books.length, 19);
-  assert.equal(new Set(books.map((b) => b.id)).size, 19);
-  assert.equal(new Set(books.map((b) => b.slug)).size, 19);
+  const frozen = books.filter((b) => baseline.some((o) => o.id === b.id));
+  assert.equal(frozen.length, 19);
+  assert.equal(new Set(books.map((b) => b.id)).size, books.length);
+  assert.equal(new Set(books.map((b) => b.slug)).size, books.length);
   assert.deepEqual(
-    books.map((b) => b.id).sort(),
+    frozen.map((b) => b.id).sort(),
     baseline.map((b) => b.id).sort(),
+  );
+  assert.deepEqual(
+    books
+      .filter((b) => !frozen.includes(b))
+      .map((b) => b.id)
+      .sort(),
+    Object.keys(added).map(Number).sort(),
   );
   let total = 0,
     count = 0;
-  for (const b of books) {
+  for (const b of frozen) {
     const old = baseline.find((o) => o.id === b.id);
     assert.equal(b.price, old.price, `Price ADM-${b.id}`);
     assert.equal(b.lb_url, old.lb_url, `Listing ADM-${b.id}`);
@@ -114,6 +129,29 @@ test("19 references preserve production IDs, prices, exact Leboncoin links and 1
   }
   assert.equal(total, 322);
   assert.equal(count, 100);
+});
+
+test("references added after the baseline keep their price, listing and built photos", async () => {
+  for (const [id, [price, photos, listing]] of Object.entries(added)) {
+    const b = books.find((x) => x.id === Number(id));
+    assert.ok(b, `ADM-${id}`);
+    assert.equal(b.price, price, `Price ADM-${id}`);
+    assert.equal(b.lb_url, listing, `Listing ADM-${id}`);
+    assert.match(b.slug, /^[a-z0-9]+(?:-[a-z0-9]+)*$/);
+    assert.ok(
+      ["unknown", "available", "reserved", "sold"].includes(b.availability),
+    );
+    assert.match(b.description, /\n\nEnvoi soigné\.$/);
+    assert.equal(media[id].length, photos, `Photos ADM-${id}`);
+    for (const image of media[id]) {
+      assert.ok(image.alt && image.caption);
+      assert.ok(image.variants.length >= 3);
+      for (const variant of image.variants) {
+        assert.ok(variant.width > 0 && variant.height > 0);
+        assert.ok((await stat(distFile(variant.src))).isFile(), variant.src);
+      }
+    }
+  }
 });
 
 test("selection restores legacy IDs and stale objects, rejects malformed data and duplicates", () => {

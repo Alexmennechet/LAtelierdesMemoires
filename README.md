@@ -1,6 +1,6 @@
 # L’Atelier des Mémoires
 
-Catalogue statique de 19 exemplaires avec fiches françaises individuelles, sélection personnelle, 100 photographies des nouveautés, trois descriptions anglaises et trois guides bibliographiques. Les transactions et la prise de contact ont lieu sur Leboncoin.
+Catalogue statique de 22 exemplaires avec fiches françaises individuelles, sélection personnelle, 100 photographies des nouveautés, trois descriptions anglaises et trois guides bibliographiques. Les transactions et la prise de contact ont lieu sur Leboncoin.
 
 ## Construire et vérifier
 

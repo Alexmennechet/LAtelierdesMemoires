@@ -6,7 +6,7 @@ Les 32 recommandations ont été acceptées. Ce lot traite le socle technique et
 |---|---|---|
 | A01 | Implémenté | Navigation et sélection mobiles avec liens et boîtes de dialogue natives ; clic réel et clavier testés |
 | A02 | Implémenté | Catalogue et fiches dans le HTML initial ; aucune attente window.onload ou préchargement bloquant |
-| A03 | Implémenté | 19 URL françaises individuelles |
+| A03 | Implémenté | 22 URL françaises individuelles |
 | A04 | Implémenté | Liens HTML, navigation clavier et amélioration progressive |
 | A05 | Implémenté | Notre Belle Patrie : 1911, J. Monnier, septième édition ; inscription décrite sans authentification d’autographe |
 | A06 | Implémenté, procédure manuelle | Source unique et quatre statuts ; pas de synchronisation automatique Leboncoin |
