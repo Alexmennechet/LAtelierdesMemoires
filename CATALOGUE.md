@@ -26,9 +26,27 @@ Total des 15 prix : **322 €**, pour 16 volumes physiques et 100 images finales
 
 ## Mise à jour des liens Leboncoin
 
-Les 15 livres ne sont pas encore publiés sur Leboncoin, selon le propriétaire. Leur champ `lb_url` vaut `null`, y compris les trois fiches actualisées dont les anciens liens ne sont pas reconduits. Les cartes, fenêtres et sélection indiquent « Annonce Leboncoin à venir ». Aucun faux lien ni disponibilité en stock n’est généré.
+Les 15 livres sont désormais publiés sur le compte L’Atelier des Mémoires : quatre nouvelles annonces et onze annonces existantes actualisées. Leurs liens et prix ont été vérifiés sur le compte le 2 novembre 2026. Les 15 champs `lb_url` sont renseignés et les anciennes mentions « Annonce Leboncoin à venir » sont retirées des descriptions. Les liens sont accessibles directement dans les fiches et depuis la sélection. Aucune disponibilité en stock n’est déduite de ces liens.
 
-Après création d’une annonce, modifier uniquement le champ `lb_url` de l’objet concerné dans le tableau `books` de `index.html`, avec l’URL HTTPS exacte de Leboncoin. Le lien devient actif dans la sélection. Supprimer ensuite la mention « Annonce Leboncoin à venir » de la description `desc` de cette fiche. Vérifier le prix et la disponibilité sur l’annonce réelle.
+Pour remplacer un lien, modifier le champ `lb_url` de l’objet concerné dans le tableau `books` de `index.html`, avec l’URL HTTPS exacte de Leboncoin. Vérifier son titre, son prix et sa disponibilité sur l’annonce réelle. Le site ne synchronise pas automatiquement les ventes ou les changements de prix de Leboncoin.
+
+| Référence | Annonce Leboncoin |
+|---|---|
+| ADM-104 | https://www.leboncoin.fr/ad/antiquites/3141274774 |
+| ADM-105 | https://www.leboncoin.fr/ad/antiquites/3141283806 |
+| ADM-107 | https://www.leboncoin.fr/ad/antiquites/3141299326 |
+| ADM-108 | https://www.leboncoin.fr/ad/livres/3300923066 |
+| ADM-109 | https://www.leboncoin.fr/ad/livres/3300939975 |
+| ADM-110 | https://www.leboncoin.fr/ad/collection/2974849078 |
+| ADM-111 | https://www.leboncoin.fr/ad/collection/2974790022 |
+| ADM-112 | https://www.leboncoin.fr/ad/collection/2974786236 |
+| ADM-113 | https://www.leboncoin.fr/ad/collection/2974781583 |
+| ADM-114 | https://www.leboncoin.fr/ad/collection/2975627113 |
+| ADM-115 | https://www.leboncoin.fr/ad/collection/2975622199 |
+| ADM-116 | https://www.leboncoin.fr/ad/livres/3300943235 |
+| ADM-117 | https://www.leboncoin.fr/ad/collection/2974846282 |
+| ADM-118 | https://www.leboncoin.fr/ad/antiquites/3146896358 |
+| ADM-119 | https://www.leboncoin.fr/ad/livres/3300946167 |
 
 ## Images et descriptions
 
@@ -38,6 +56,6 @@ Les dates certaines sont 1893 (Berthe), 1949 (Nils) et 1934 (Quentin). Les autre
 
 ## Vérification
 
-Exécuter `node tests/catalogue.mjs`. Ce contrôle ne nécessite pas de dépendance et vérifie les 19 références, les 15 prix, les 100 images et leurs variantes locales, la validité des scripts et l’absence d’offre inventée pour les annonces à venir.
+Exécuter `node tests/catalogue.mjs`. Ce contrôle ne nécessite pas de dépendance et vérifie les 19 références, les 15 prix, les 100 images et leurs variantes locales, les liens uniques vers Leboncoin et la validité des scripts.
 
 La branche `codex/ameliorations-site` et la proposition antérieure restent distinctes. Avant de fusionner cette refonte, reprendre les présentes données et galeries dans son format `data/books.json` / `data/media.json` pour conserver ce catalogue.
