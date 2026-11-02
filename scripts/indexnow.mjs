@@ -6,6 +6,12 @@ import { createHash } from "node:crypto";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const endpoint = "https://api.indexnow.org/indexnow";
 const hash = (value) => createHash("sha256").update(value).digest("hex");
+// Netlify inserts this non-rendered hosting notice after deployment. Keep all
+// visible text, metadata, links and scripts in the comparison unchanged.
+const publishedContentHash = (html) =>
+  hash(
+    html.replace(/<!-- This site is hosted on Netlify\.[\s\S]*?-->\r?\n/g, ""),
+  );
 
 // Only explicitly named, indexable canonical pages from our built sitemap.
 export function notificationPlan(siteUrl, key, sitemap, paths) {
@@ -100,7 +106,8 @@ export async function notify({
     if (
       response.status !== 200 ||
       !response.headers.get("content-type")?.includes("text/html") ||
-      hash(await response.text()) !== page.hash
+      publishedContentHash(await response.text()) !==
+        publishedContentHash(page.html)
     )
       throw Error(
         `Production differs from this build: ${page.url}; no submission sent`,
