@@ -336,7 +336,7 @@
 
         .controls { display: flex; justify-content: space-between; margin-bottom: 2rem; flex-wrap: wrap; gap: 20px; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
 
-        .filter-group { display: flex; overflow-x: auto; white-space: nowrap; padding-bottom: 5px; -webkit-overflow-scrolling: touch; }
+        .filter-group { display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%; padding-bottom: 5px; }
 
         .filter-btn { background: none; border: none; margin-right: 15px; font-family: var(--font-body);
             font-size: 16px; text-transform: uppercase; cursor: pointer; color: var(--text-muted); font-size: 0.85rem; }
@@ -355,6 +355,8 @@
         .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
 
         .card-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
+        .card-img.final-photo { object-fit: contain; background: #f4f1ea; }
+        .listing-status { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
 
         .card-info { padding: 1.2rem; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
 
@@ -439,7 +441,7 @@
 
         
 
-        .modal-gallery { display: flex; gap: 10px; overflow-x: auto; width: 100%; padding: 10px 0; justify-content: center; }
+        .modal-gallery { display: flex; gap: 10px; overflow-x: auto; width: 100%; padding: 10px 0; justify-content: flex-start; }
 
         .gallery-thumb { width: 50px; height: 50px; object-fit: cover; cursor: pointer; border: 2px solid transparent; opacity: 0.6; transition: 0.2s; flex-shrink: 0; }
 
@@ -751,6 +753,12 @@
 
                     <button class="filter-btn" data-filter="Histoire">Histoire</button>
 
+                    <button class="filter-btn" data-filter="Romans & contes">Romans & contes</button>
+
+                    <button class="filter-btn" data-filter="Biographies">Biographies</button>
+
+                    <button class="filter-btn" data-filter="Poésie & théâtre">Poésie & théâtre</button>
+
                     <button class="filter-btn" data-filter="Art">Art & Mode</button>
 
                 </div>
@@ -853,6 +861,8 @@
 
             <p style="font-size: 1.4rem; color: var(--gold); margin-bottom: 1.5rem; font-weight:bold;" id="modal-price"></p>
 
+            <p class="listing-status" id="modal-listing-status"></p>
+
             <div style="color: var(--text-muted); margin-bottom: 2rem; white-space: pre-line; line-height:1.7; font-size: 0.95rem;" id="modal-desc"></div>
 
             <button class="btn btn-gold" id="modal-btn">Ajouter à la collection</button>
@@ -908,209 +918,510 @@
     <script>
         // --- DONNÉES RÉELLES ---
         const books = [
-
-            { 
-
-                id: 101, 
-
-                title: "Carnet original 1918 – Croquis de guerre & mode – Authentique & signé", 
-
-                category: "Histoire", 
-
-                price: 450, 
-
-                lb_url: "https://www.leboncoin.fr/ad/antiquites/3033445664",
-
-                img: "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/dc78c5bc5430f88f70c7f9654a8b7b96abc2774b/PRODUITS/Carnet%20original%201918/Images/df352e9a9b2fc061f25982613a4207a54951c2de.jpg?raw=true",
-
-                images: [
-
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/dc78c5bc5430f88f70c7f9654a8b7b96abc2774b/PRODUITS/Carnet%20original%201918/Images/df352e9a9b2fc061f25982613a4207a54951c2de.jpg?raw=true",
-
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/dc78c5bc5430f88f70c7f9654a8b7b96abc2774b/PRODUITS/Carnet%20original%201918/Images/bf359368283f2c79ee68ccd866d5aff36831235c.jpg?raw=true",
-
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/dc78c5bc5430f88f70c7f9654a8b7b96abc2774b/PRODUITS/Carnet%20original%201918/Images/9e5ac70c2d416542478145ef1a9a3c1b03396122.jpg?raw=true",
-
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/dc78c5bc5430f88f70c7f9654a8b7b96abc2774b/PRODUITS/Carnet%20original%201918/Images/902bb33eeb12f75d46e4e5a0dac406673f11b9ef.jpg?raw=true",
-
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/dc78c5bc5430f88f70c7f9654a8b7b96abc2774b/PRODUITS/Carnet%20original%201918/Images/82e3ea2c8e1cd64da52112a3c3503e6ae2871e73.jpg?raw=true",
-
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/dc78c5bc5430f88f70c7f9654a8b7b96abc2774b/PRODUITS/Carnet%20original%201918/Images/6445bc1cfb0749abef38431a3df010257369290b.jpg?raw=true",
-
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/dc78c5bc5430f88f70c7f9654a8b7b96abc2774b/PRODUITS/Carnet%20original%201918/Images/251c5133a4ba3fc1cf99f8ceecaf182dc578b33a.jpg?raw=true",
-
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/dc78c5bc5430f88f70c7f9654a8b7b96abc2774b/PRODUITS/Carnet%20original%201918/Images/1e995009cc45d069639ea921b7add9b0341c7236.jpg?raw=true"
-
-                ],
-
-                desc: `Pièce unique de collection. Carnet manuscrit daté de 1918, illustré à la main par E. Hervet.\n\nContenu :\n- Croquis de mode féminine période armistice.\n- Dessins militaires détaillés (chars Renault, grenades).\n- Études de visages et décors.\n\nEstimation : 500 €.`
-
-            },
-
-            {
-
-                id: 102,
-
-                title: "Livre ancien 1941 – Offert par Albert Dalimier (Dédicace officielle)",
-
-                category: "Histoire",
-
-                price: 80, 
-
-                lb_url: "https://www.leboncoin.fr/ad/collection/2976848333",
-
-                img: "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/7a8c82923a4471db121fbd16ef11bf3794a9e5c8/PRODUITS/Notre%20belle%20patrie/Images/c1ec1c9c7a39dcec05e1271212076a8e4329f259.jpg?raw=true",
-
-                images: [
-
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/7a8c82923a4471db121fbd16ef11bf3794a9e5c8/PRODUITS/Notre%20belle%20patrie/Images/c1ec1c9c7a39dcec05e1271212076a8e4329f259.jpg?raw=true",
-
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/7a8c82923a4471db121fbd16ef11bf3794a9e5c8/PRODUITS/Notre%20belle%20patrie/Images/fccddfc9648672447e976f3807f520b8352ae281.jpg?raw=true",
-
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/7a8c82923a4471db121fbd16ef11bf3794a9e5c8/PRODUITS/Notre%20belle%20patrie/Images/d6a02561dfa65828da661a20d3502570ec8ec139.jpg?raw=true"
-
-                ],
-
-                desc: `Exemplaire historique du livre « Notre Belle Patrie » (1941).\n\nEnrichi d’un envoi manuscrit officiel du Sous-Secrétaire d’État aux Beaux-Arts Albert Dalimier.\n\nIdéal pour collectionneur d’histoire politique française.`
-
-            },
-
-            {
-
-                id: 103,
-
-                title: "Reliure Cuir - Berthoud : L’Homme depuis cinq mille ans (1870)",
-
-                category: "Histoire",
-
-                price: 80, 
-
-                lb_url: "https://www.leboncoin.fr/ad/collection/2976858403",
-
-                img: "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/56ea0962fb0f335c4f9581553c736bb143bdc160/PRODUITS/L%E2%80%99Homme%20depuis%20cinq%20mille%20ans/Images/ff962cac1ca24c0149cc5b77b348beb2c272fc49.jpg?raw=true",
-
-                images: [
-
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/56ea0962fb0f335c4f9581553c736bb143bdc160/PRODUITS/L%E2%80%99Homme%20depuis%20cinq%20mille%20ans/Images/ff962cac1ca24c0149cc5b77b348beb2c272fc49.jpg?raw=true",
-
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/56ea0962fb0f335c4f9581553c736bb143bdc160/PRODUITS/L%E2%80%99Homme%20depuis%20cinq%20mille%20ans/Images/ee49017dd8ddcb1e743c596f870d50db4ab642e9.jpg?raw=true"
-
-                ],
-
-                desc: `Ouvrage de S. Henry Berthoud illustré par Yan’ Dargent.\n\nReliure demi-chagrin noir à nerfs, tranches dorées.\nProvenance Librairie Herluison (Orléans).\nGravures intactes.`
-
-            },
-            {
-                id: 104,
-                title: "Livre ancien – Contes bleus – Édouard Laboulaye – Édition illustrée – Reliure d’époque",
-                category: "Histoire",
-                price: 80, 
-                lb_url: "https://www.leboncoin.fr/ad/antiquites/3141274774",
-                img: "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Contes%20Bleu/Contes%20Bleu1.png?raw=true",
-                images: [
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Contes%20Bleu/Contes%20Bleu1.png?raw=true",
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Contes%20Bleu/Contes%20Bleu2.png?raw=true",
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Contes%20Bleu/Contes%20Bleu3.png?raw=true",
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Contes%20Bleu/Contes%20Bleu4.png?raw=true",
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Contes%20Bleu/Contes%20Bleu5.png?raw=true",
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Contes%20Bleu/Contes%20Bleu6.png?raw=true"
-                ],
-                desc: `Ouvrage ancien intitulé Contes bleus, de Édouard Laboulaye, membre de l’Institut, figure majeure de la littérature et de la pensée française du XIXᵉ siècle.
-
-Cette édition illustrée rassemble plusieurs contes emblématiques, dont Yvon et Finette, La Bonne Femme, Poucinette et Contes bohèmes, accompagnés de dessins de Yan’ Dargent, illustrateur reconnu pour la finesse et la poésie de son trait.
-
-Éditeur : Ancienne Librairie Furne – Boivin & Cie, Paris
-Période : Fin XIXᵉ / début XXᵉ siècle
-Reliure : Demi-reliure d’époque, dos décoré, plats marbrés
-Impression : Typographie Firmin-Didot et Cie (Mesnil, Eure)
-
-Livre ancien en bon état général, cohérent avec son âge :
-Les photographies font partie intégrante de la description et permettent d’apprécier l’état réel de l’ouvrage.`
-            },
-            {
-                id: 105,
-                title: "Victor Hugo - Années d’enfance | Édition illustrée ancienne",
-                category: "Histoire",
-                price: 20, 
-                lb_url: "https://www.leboncoin.fr/ad/antiquites/3141283806",
-                img: "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Victor%20Hugo/Victor%20Hugo2.png?raw=true",
-                images: [
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Victor%20Hugo/Victor%20Hugo2.png?raw=true",
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Victor%20Hugo/Victor%20Hugo1.png?raw=true",
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Victor%20Hugo/Victor%20Hugo3.png?raw=true",
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Victor%20Hugo/Victor%20Hugo4.png?raw=true",
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Victor%20Hugo/Victor%20Hugo5.png?raw=true",
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Victor%20Hugo/Victor%20Hugo6.png?raw=true"
-                ],
-                desc: `Ouvrage ancien intitulé Années d’enfance, de Victor Hugo, figure majeure de la littérature française et monument du patrimoine culturel du XIXᵉ siècle.
-
-Cette édition propose un texte autobiographique rare et sensible, consacré aux souvenirs d’enfance de l’auteur, enrichi d’un important ensemble iconographique.
-
-Présentation par : Gustave Simon
-Collection : Bibliothèque des écoles et des familles
-Illustrations : Ouvrage illustré de 40 gravures
-Éditeur : Librairie Hachette, Paris
-Mention : Nouvelle édition
-
-Reliure : Demi-reliure d’époque, dos décoré, titrage doré.
-Livre ancien en bon état général, cohérent avec son âge.`
-            },
-            {
-                id: 106,
-                title: "Livre ancien illustré – Jacques Dumont, roman d’un petit paysan – Médéric Charot",
-                category: "Histoire",
-                price: 20, 
-                lb_url: "https://www.leboncoin.fr/ad/antiquites/3141286544",
-                img: "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Jacques%20Dumont/Jacques%20Dumont1.png?raw=true",
-                images: [
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Jacques%20Dumont/Jacques%20Dumont1.png?raw=true",
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Jacques%20Dumont/Jacques%20Dumont2.png?raw=true",
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Jacques%20Dumont/Jacques%20Dumont3.png?raw=true",
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Jacques%20Dumont/Jacques%20Dumont4.png?raw=true",
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Jacques%20Dumont/Jacques%20Dumont5.png?raw=true",
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Jacques%20Dumont/Jacques%20Dumont6.png?raw=true"
-                ],
-                desc: `Ouvrage ancien intitulé Jacques Dumont, roman d’un petit paysan, de Médéric Charot, écrivain français engagé de la fin du XIXᵉ siècle.
-
-Roman à dimension sociale, salué à son époque, préfacé par George Sand et accompagné d’un rapport de Léon Bourgeois.
-Édition illustrée de gravures en noir et blanc, apportant un réel intérêt esthétique et documentaire.
-
-Éditeur : Librairie Gedalge, Paris
-Illustrations : Henri Thiriet
-Période : Fin XIXᵉ / début XXᵉ siècle
-Reliure : Demi-reliure d’époque, dos et plats décorés
-
-État : Bon état général pour un ouvrage ancien.`
-            },
-            {
-                id: 107,
-                title: "Rare - Le Capitaine Fracasse - Théophile Gautier - Grand format illustré Daniel-Girard",
-                category: "Histoire",
-                price: 60, 
-                lb_url: "https://www.leboncoin.fr/ad/antiquites/3141299326",
-                img: "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Le%20Capitaine%20Fracasse/Le%20Capitaine%20Fracasse1.png?raw=true",
-                images: [
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Le%20Capitaine%20Fracasse/Le%20Capitaine%20Fracasse1.png?raw=true",
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Le%20Capitaine%20Fracasse/Le%20Capitaine%20Fracasse2.png?raw=true",
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Le%20Capitaine%20Fracasse/Le%20Capitaine%20Fracasse3.png?raw=true",
-                    "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Le%20Capitaine%20Fracasse/Le%20Capitaine%20Fracasse4.png?raw=true"
-                ],
-                desc: `Vends livre ancien grand format : Le Capitaine Fracasse – Théophile Gautier.
-Édition de collection “Hors Série – Prix d’Honneur” (Société Universitaire d’Éditions et de Librairie).
-
-Auteur : Théophile Gautier
-Introduction & adaptation : Édouard Blanc
-Illustrations : Daniel-Girard (noir & blanc)
-Format : env. 32 x 25 x 4 cm (grand format)
-Poids : env. 1,8 kg
-
-Impression : “L’Emancipatrice – imprimerie coopérative Paris XVe"
-Reliure : couverture cartonnée épaisse façon reliure, dos lisse, titre doré
-
-Bon état général pour un ouvrage ancien.`
-            }
-
-        ];
+    {
+        "id": 101,
+        "title": "Carnet original 1918 – Croquis de guerre & mode – Authentique & signé",
+        "category": "Histoire",
+        "price": 450,
+        "lb_url": "https://www.leboncoin.fr/ad/antiquites/3033445664",
+        "img": "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/dc78c5bc5430f88f70c7f9654a8b7b96abc2774b/PRODUITS/Carnet%20original%201918/Images/df352e9a9b2fc061f25982613a4207a54951c2de.jpg?raw=true",
+        "images": [
+            "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/dc78c5bc5430f88f70c7f9654a8b7b96abc2774b/PRODUITS/Carnet%20original%201918/Images/df352e9a9b2fc061f25982613a4207a54951c2de.jpg?raw=true",
+            "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/dc78c5bc5430f88f70c7f9654a8b7b96abc2774b/PRODUITS/Carnet%20original%201918/Images/bf359368283f2c79ee68ccd866d5aff36831235c.jpg?raw=true",
+            "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/dc78c5bc5430f88f70c7f9654a8b7b96abc2774b/PRODUITS/Carnet%20original%201918/Images/9e5ac70c2d416542478145ef1a9a3c1b03396122.jpg?raw=true",
+            "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/dc78c5bc5430f88f70c7f9654a8b7b96abc2774b/PRODUITS/Carnet%20original%201918/Images/902bb33eeb12f75d46e4e5a0dac406673f11b9ef.jpg?raw=true",
+            "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/dc78c5bc5430f88f70c7f9654a8b7b96abc2774b/PRODUITS/Carnet%20original%201918/Images/82e3ea2c8e1cd64da52112a3c3503e6ae2871e73.jpg?raw=true",
+            "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/dc78c5bc5430f88f70c7f9654a8b7b96abc2774b/PRODUITS/Carnet%20original%201918/Images/6445bc1cfb0749abef38431a3df010257369290b.jpg?raw=true",
+            "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/dc78c5bc5430f88f70c7f9654a8b7b96abc2774b/PRODUITS/Carnet%20original%201918/Images/251c5133a4ba3fc1cf99f8ceecaf182dc578b33a.jpg?raw=true",
+            "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/dc78c5bc5430f88f70c7f9654a8b7b96abc2774b/PRODUITS/Carnet%20original%201918/Images/1e995009cc45d069639ea921b7add9b0341c7236.jpg?raw=true"
+        ],
+        "desc": "Pièce unique de collection. Carnet manuscrit daté de 1918, illustré à la main par E. Hervet.\n\nContenu :\n- Croquis de mode féminine période armistice.\n- Dessins militaires détaillés (chars Renault, grenades).\n- Études de visages et décors.\n\nEstimation : 500 €."
+    },
+    {
+        "id": 102,
+        "title": "Livre ancien 1941 – Offert par Albert Dalimier (Dédicace officielle)",
+        "category": "Histoire",
+        "price": 80,
+        "lb_url": "https://www.leboncoin.fr/ad/collection/2976848333",
+        "img": "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/7a8c82923a4471db121fbd16ef11bf3794a9e5c8/PRODUITS/Notre%20belle%20patrie/Images/c1ec1c9c7a39dcec05e1271212076a8e4329f259.jpg?raw=true",
+        "images": [
+            "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/7a8c82923a4471db121fbd16ef11bf3794a9e5c8/PRODUITS/Notre%20belle%20patrie/Images/c1ec1c9c7a39dcec05e1271212076a8e4329f259.jpg?raw=true",
+            "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/7a8c82923a4471db121fbd16ef11bf3794a9e5c8/PRODUITS/Notre%20belle%20patrie/Images/fccddfc9648672447e976f3807f520b8352ae281.jpg?raw=true",
+            "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/7a8c82923a4471db121fbd16ef11bf3794a9e5c8/PRODUITS/Notre%20belle%20patrie/Images/d6a02561dfa65828da661a20d3502570ec8ec139.jpg?raw=true"
+        ],
+        "desc": "Exemplaire historique du livre « Notre Belle Patrie » (1941).\n\nEnrichi d’un envoi manuscrit officiel du Sous-Secrétaire d’État aux Beaux-Arts Albert Dalimier.\n\nIdéal pour collectionneur d’histoire politique française."
+    },
+    {
+        "id": 103,
+        "title": "Reliure Cuir - Berthoud : L’Homme depuis cinq mille ans (1870)",
+        "category": "Histoire",
+        "price": 80,
+        "lb_url": "https://www.leboncoin.fr/ad/collection/2976858403",
+        "img": "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/56ea0962fb0f335c4f9581553c736bb143bdc160/PRODUITS/L%E2%80%99Homme%20depuis%20cinq%20mille%20ans/Images/ff962cac1ca24c0149cc5b77b348beb2c272fc49.jpg?raw=true",
+        "images": [
+            "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/56ea0962fb0f335c4f9581553c736bb143bdc160/PRODUITS/L%E2%80%99Homme%20depuis%20cinq%20mille%20ans/Images/ff962cac1ca24c0149cc5b77b348beb2c272fc49.jpg?raw=true",
+            "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/56ea0962fb0f335c4f9581553c736bb143bdc160/PRODUITS/L%E2%80%99Homme%20depuis%20cinq%20mille%20ans/Images/ee49017dd8ddcb1e743c596f870d50db4ab642e9.jpg?raw=true"
+        ],
+        "desc": "Ouvrage de S. Henry Berthoud illustré par Yan’ Dargent.\n\nReliure demi-chagrin noir à nerfs, tranches dorées.\nProvenance Librairie Herluison (Orléans).\nGravures intactes."
+    },
+    {
+        "id": 104,
+        "title": "Contes bleus — Édouard Laboulaye — Illustrations de Yan’ Dargent",
+        "category": "Romans & contes",
+        "price": 30.0,
+        "lb_url": null,
+        "img": "/PRODUITS/Catalogue-2026-11/contes-bleus/07-1200.webp",
+        "card_img": "/PRODUITS/Catalogue-2026-11/contes-bleus/07-640.webp",
+        "images": [
+            "/PRODUITS/Catalogue-2026-11/contes-bleus/07-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/contes-bleus/01-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/contes-bleus/02-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/contes-bleus/03-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/contes-bleus/04-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/contes-bleus/05-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/contes-bleus/06-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/contes-bleus/08-1200.webp"
+        ],
+        "thumbnails": [
+            "/PRODUITS/Catalogue-2026-11/contes-bleus/07-160.webp",
+            "/PRODUITS/Catalogue-2026-11/contes-bleus/01-160.webp",
+            "/PRODUITS/Catalogue-2026-11/contes-bleus/02-160.webp",
+            "/PRODUITS/Catalogue-2026-11/contes-bleus/03-160.webp",
+            "/PRODUITS/Catalogue-2026-11/contes-bleus/04-160.webp",
+            "/PRODUITS/Catalogue-2026-11/contes-bleus/05-160.webp",
+            "/PRODUITS/Catalogue-2026-11/contes-bleus/06-160.webp",
+            "/PRODUITS/Catalogue-2026-11/contes-bleus/08-160.webp"
+        ],
+        "desc": "Un recueil de contes illustré par Yan’ Dargent, présenté dans une demi-reliure verte à coins, avec plats marbrés et caissons dorés au dos.\n\nAuteur : Édouard Laboulaye\nÉdition : Paris, Ancienne Librairie Furne, Boivin & Cie, 3 et 5 rue Palatine. Dixième édition, selon la page de titre photographiée. Année non indiquée sur cette page ; cette réédition ne doit pas être confondue avec l’édition Furne de 1864.\n\nPrésentation et état : Tranche supérieure colorée ; état des coins, du dos et des plats visible dans la galerie.\n\nLes photographies présentent le volume proposé. La complétude et la solidité des cahiers ne sont pas certifiées par les seules images ; elles restent à vérifier sur le livre.\n\nPrix proposé : 30 €, hors livraison.\nAnnonce Leboncoin à venir.",
+        "author": "Édouard Laboulaye",
+        "year": null
+    },
+    {
+        "id": 105,
+        "title": "Victor Hugo — Années d’enfance — Gustave Simon — Hachette",
+        "category": "Biographies",
+        "price": 15.0,
+        "lb_url": null,
+        "img": "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/05-1200.webp",
+        "card_img": "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/05-640.webp",
+        "images": [
+            "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/05-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/01-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/02-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/03-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/04-1200.webp"
+        ],
+        "thumbnails": [
+            "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/05-160.webp",
+            "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/01-160.webp",
+            "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/02-160.webp",
+            "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/03-160.webp",
+            "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/04-160.webp"
+        ],
+        "desc": "Une biographie de l’enfance de Victor Hugo écrite par Gustave Simon, en demi-reliure rouge avec plats marbrés rouges et noirs et décors dorés au dos.\n\nAuteur : Gustave Simon\nÉdition : Hachette, attribution éditoriale probable. L’œuvre est attestée dès 1904 et une deuxième édition est cataloguée en 1906 ; ces dates ne certifient pas ce volume. Année et rang d’édition à confirmer sur la page de titre. Il s’agit d’une biographie, et non d’un texte autobiographique de Victor Hugo.\n\nPrésentation et état : Usures des coiffes et frottements de la demi-reliure.\n\nLes photographies présentent le volume proposé. La complétude et la solidité des cahiers ne sont pas certifiées par les seules images ; elles restent à vérifier sur le livre.\n\nPrix proposé : 15 €, hors livraison.\nAnnonce Leboncoin à venir.",
+        "author": "Gustave Simon",
+        "year": null
+    },
+    {
+        "id": 106,
+        "title": "Livre ancien illustré – Jacques Dumont, roman d’un petit paysan – Médéric Charot",
+        "category": "Histoire",
+        "price": 20,
+        "lb_url": "https://www.leboncoin.fr/ad/antiquites/3141286544",
+        "img": "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Jacques%20Dumont/Jacques%20Dumont1.png?raw=true",
+        "images": [
+            "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Jacques%20Dumont/Jacques%20Dumont1.png?raw=true",
+            "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Jacques%20Dumont/Jacques%20Dumont2.png?raw=true",
+            "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Jacques%20Dumont/Jacques%20Dumont3.png?raw=true",
+            "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Jacques%20Dumont/Jacques%20Dumont4.png?raw=true",
+            "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Jacques%20Dumont/Jacques%20Dumont5.png?raw=true",
+            "https://github.com/Alexmennechet/LAtelierdesMemoires/blob/02dbd46c0a11fb949103c3b38884c068dab1174b/PRODUITS/Jacques%20Dumont/Jacques%20Dumont6.png?raw=true"
+        ],
+        "desc": "Ouvrage ancien intitulé Jacques Dumont, roman d’un petit paysan, de Médéric Charot, écrivain français engagé de la fin du XIXᵉ siècle.\n\nRoman à dimension sociale, salué à son époque, préfacé par George Sand et accompagné d’un rapport de Léon Bourgeois.\nÉdition illustrée de gravures en noir et blanc, apportant un réel intérêt esthétique et documentaire.\n\nÉditeur : Librairie Gedalge, Paris\nIllustrations : Henri Thiriet\nPériode : Fin XIXᵉ / début XXᵉ siècle\nReliure : Demi-reliure d’époque, dos et plats décorés\n\nÉtat : Bon état général pour un ouvrage ancien."
+    },
+    {
+        "id": 107,
+        "title": "Le Capitaine Fracasse — Théophile Gautier — Illustré par Daniel-Girard",
+        "category": "Romans & contes",
+        "price": 25.0,
+        "lb_url": null,
+        "img": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/08-1200.webp",
+        "card_img": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/08-640.webp",
+        "images": [
+            "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/08-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/01-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/02-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/03-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/04-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/05-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/06-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/07-1200.webp"
+        ],
+        "thumbnails": [
+            "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/08-160.webp",
+            "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/01-160.webp",
+            "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/02-160.webp",
+            "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/03-160.webp",
+            "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/04-160.webp",
+            "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/05-160.webp",
+            "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/06-160.webp",
+            "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/07-160.webp"
+        ],
+        "desc": "Le roman d’aventures de Théophile Gautier dans une édition illustrée par Daniel-Girard, avec demi-reliure bordeaux à coins, plats marbrés ocre et titre doré au dos.\n\nAuteur : Théophile Gautier\nÉdition : Paris, Société universitaire d’éditions et de librairie, 78 boulevard Saint-Michel. Introduction et adaptation d’Édouard Blanc. Une publication correspondante est annoncée en 1936 ; cette datation reste probable, aucun millésime imprimé n’étant visible sur les photographies.\n\nPrésentation et état : Frottements et usures visibles aux coins et aux charnières.\n\nLes photographies présentent le volume proposé. La complétude et la solidité des cahiers ne sont pas certifiées par les seules images ; elles restent à vérifier sur le livre.\n\nPrix proposé : 25 €, hors livraison.\nAnnonce Leboncoin à venir.",
+        "author": "Théophile Gautier",
+        "year": null
+    },
+    {
+        "id": 108,
+        "title": "Berthe ou Le Devoir accompli — Pierre Dartois — Mégard, 1893",
+        "category": "Romans & contes",
+        "price": 12.0,
+        "lb_url": null,
+        "img": "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/01-1200.webp",
+        "card_img": "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/01-640.webp",
+        "images": [
+            "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/01-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/02-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/03-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/04-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/05-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/06-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/07-1200.webp"
+        ],
+        "thumbnails": [
+            "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/01-160.webp",
+            "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/02-160.webp",
+            "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/03-160.webp",
+            "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/04-160.webp",
+            "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/05-160.webp",
+            "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/06-160.webp",
+            "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/07-160.webp"
+        ],
+        "desc": "Un ouvrage de littérature morale pour la jeunesse, dans un cartonnage rouge richement décoré de fleurs, d’oiseaux et de motifs architecturaux noirs et dorés.\n\nAuteur : Pierre Dartois\nÉdition : Rouen, Mégard et Cie, 1893. Collection Bibliothèque morale de la jeunesse ; gravures dans le texte. L’année est lisible sur la page de titre.\n\nPrésentation et état : Usures visibles aux coins et en pied du cartonnage.\n\nLes photographies présentent le volume proposé. La complétude et la solidité des cahiers ne sont pas certifiées par les seules images ; elles restent à vérifier sur le livre.\n\nPrix proposé : 12 €, hors livraison.\nAnnonce Leboncoin à venir.",
+        "author": "Pierre Dartois",
+        "year": "1893"
+    },
+    {
+        "id": 109,
+        "title": "Ceux du blocus — Paul Chack — Reliure à plats marbrés",
+        "category": "Histoire",
+        "price": 25.0,
+        "lb_url": null,
+        "img": "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/05-1200.webp",
+        "card_img": "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/05-640.webp",
+        "images": [
+            "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/05-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/01-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/02-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/03-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/04-1200.webp"
+        ],
+        "thumbnails": [
+            "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/05-160.webp",
+            "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/01-160.webp",
+            "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/02-160.webp",
+            "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/03-160.webp",
+            "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/04-160.webp"
+        ],
+        "desc": "Les récits d’histoire navale de Paul Chack, réunis dans une reliure sombre à dos à nerfs, titres dorés et plats marbrés bleu-vert.\n\nAuteur : Paul Chack\nÉdition : Éditions de France, édition de référence de 1928, avec cartes de l’auteur. L’année propre à cet exemplaire reste à confirmer. La justification photographiée ne permet pas d’affirmer un exemplaire numéroté, signé ou sur grand papier.\n\nPrésentation et état : Frottements visibles aux coiffes et aux charnières. Présence et nombre des cartes à vérifier sur le volume.\n\nLes photographies présentent le volume proposé. La complétude et la solidité des cahiers ne sont pas certifiées par les seules images ; elles restent à vérifier sur le livre.\n\nPrix proposé : 25 €, hors livraison.\nAnnonce Leboncoin à venir.",
+        "author": "Paul Chack",
+        "year": null
+    },
+    {
+        "id": 110,
+        "title": "Harold, héros d’aventures — Paul Duval — Cartonnage illustré",
+        "category": "Romans & contes",
+        "price": 15.0,
+        "lb_url": null,
+        "img": "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/07-1200.webp",
+        "card_img": "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/07-640.webp",
+        "images": [
+            "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/07-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/01-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/02-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/03-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/04-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/05-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/06-1200.webp"
+        ],
+        "thumbnails": [
+            "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/07-160.webp",
+            "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/01-160.webp",
+            "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/02-160.webp",
+            "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/03-160.webp",
+            "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/04-160.webp",
+            "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/05-160.webp",
+            "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/06-160.webp"
+        ],
+        "desc": "Un récit d’aventures et de contrebandiers, dans un cartonnage rouge à décor floral noir et doré, avec tranches dorées.\n\nAuteur : Adaptation attribuée à Marie de Château-Verdun\nÉdition : Paul Duval, imprimeur-éditeur à Elbeuf. Illustrations signées Félix Jobbé-Duval. L’adaptation est attribuée bibliographiquement à Marie de Château-Verdun ; attribution et année à confirmer sur la page de titre. Le titre est aussi décrit sous la forme Harold, héros d’aventures ou Une histoire de contrebandiers.\n\nPrésentation et état : Coiffe supérieure abîmée. Étiquette de prix scolaire présente ; sa date n’est pas certifiée.\n\nLes photographies présentent le volume proposé. La complétude et la solidité des cahiers ne sont pas certifiées par les seules images ; elles restent à vérifier sur le livre.\n\nPrix proposé : 15 €, hors livraison.\nAnnonce Leboncoin à venir.",
+        "author": "Adaptation attribuée à Marie de Château-Verdun",
+        "year": null
+    },
+    {
+        "id": 111,
+        "title": "Histoire d’un enfant — Histoire de mes idées — Edgar Quinet",
+        "category": "Biographies",
+        "price": 20.0,
+        "lb_url": null,
+        "img": "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/07-1200.webp",
+        "card_img": "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/07-640.webp",
+        "images": [
+            "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/07-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/01-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/02-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/03-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/04-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/05-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/06-1200.webp"
+        ],
+        "thumbnails": [
+            "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/07-160.webp",
+            "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/01-160.webp",
+            "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/02-160.webp",
+            "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/03-160.webp",
+            "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/04-160.webp",
+            "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/05-160.webp",
+            "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/06-160.webp"
+        ],
+        "desc": "Le récit d’enfance d’Edgar Quinet, dans un cartonnage rouge aux fleurs noires et dorées, avec tranches dorées.\n\nAuteur : Edgar Quinet\nÉdition : Paris, Librairie Hachette, Bibliothèque des écoles et des familles. Nouvelle édition illustrée de 22 gravures. Année de publication non lisible. Une inscription scolaire, probablement datée de juillet 1933, est distincte de la date d’édition.\n\nPrésentation et état : Usure aux extrémités du dos ; inscription de prix scolaire à l’intérieur.\n\nLes photographies présentent le volume proposé. La complétude et la solidité des cahiers ne sont pas certifiées par les seules images ; elles restent à vérifier sur le livre.\n\nPrix proposé : 20 €, hors livraison.\nAnnonce Leboncoin à venir.",
+        "author": "Edgar Quinet",
+        "year": null
+    },
+    {
+        "id": 112,
+        "title": "La Destinée de Silvère — Pierre Ficy — Hachette illustré",
+        "category": "Romans & contes",
+        "price": 30.0,
+        "lb_url": null,
+        "img": "/PRODUITS/Catalogue-2026-11/destinee-silvere/07-1200.webp",
+        "card_img": "/PRODUITS/Catalogue-2026-11/destinee-silvere/07-640.webp",
+        "images": [
+            "/PRODUITS/Catalogue-2026-11/destinee-silvere/07-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/destinee-silvere/01-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/destinee-silvere/02-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/destinee-silvere/03-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/destinee-silvere/04-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/destinee-silvere/05-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/destinee-silvere/06-1200.webp"
+        ],
+        "thumbnails": [
+            "/PRODUITS/Catalogue-2026-11/destinee-silvere/07-160.webp",
+            "/PRODUITS/Catalogue-2026-11/destinee-silvere/01-160.webp",
+            "/PRODUITS/Catalogue-2026-11/destinee-silvere/02-160.webp",
+            "/PRODUITS/Catalogue-2026-11/destinee-silvere/03-160.webp",
+            "/PRODUITS/Catalogue-2026-11/destinee-silvere/04-160.webp",
+            "/PRODUITS/Catalogue-2026-11/destinee-silvere/05-160.webp",
+            "/PRODUITS/Catalogue-2026-11/destinee-silvere/06-160.webp"
+        ],
+        "desc": "Un volume de la Bibliothèque des écoles et des familles, avec cartonnage rouge à encadrement floral noir et doré et tranches dorées.\n\nAuteur : Pierre Ficy\nÉdition : Paris, Librairie Hachette, 79 boulevard Saint-Germain. Nouvelle édition, illustrations d’E. Vulliemin. L’auteur est Pierre Ficy. Année et nombre exact de gravures à confirmer sur le livre.\n\nPrésentation et état : Coiffes frottées ; étiquette de distribution des prix au nom de Lucienne Cauvin, sans millésime certifié.\n\nLes photographies présentent le volume proposé. La complétude et la solidité des cahiers ne sont pas certifiées par les seules images ; elles restent à vérifier sur le livre.\n\nPrix proposé : 30 €, hors livraison.\nAnnonce Leboncoin à venir.",
+        "author": "Pierre Ficy",
+        "year": null
+    },
+    {
+        "id": 113,
+        "title": "Le Merveilleux Voyage de Nils Holgersson — Selma Lagerlöf — Delagrave, 1949",
+        "category": "Romans & contes",
+        "price": 35.0,
+        "lb_url": null,
+        "img": "/PRODUITS/Catalogue-2026-11/nils-holgersson/09-1200.webp",
+        "card_img": "/PRODUITS/Catalogue-2026-11/nils-holgersson/09-640.webp",
+        "images": [
+            "/PRODUITS/Catalogue-2026-11/nils-holgersson/09-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/nils-holgersson/01-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/nils-holgersson/02-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/nils-holgersson/03-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/nils-holgersson/04-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/nils-holgersson/05-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/nils-holgersson/06-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/nils-holgersson/07-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/nils-holgersson/08-1200.webp"
+        ],
+        "thumbnails": [
+            "/PRODUITS/Catalogue-2026-11/nils-holgersson/09-160.webp",
+            "/PRODUITS/Catalogue-2026-11/nils-holgersson/01-160.webp",
+            "/PRODUITS/Catalogue-2026-11/nils-holgersson/02-160.webp",
+            "/PRODUITS/Catalogue-2026-11/nils-holgersson/03-160.webp",
+            "/PRODUITS/Catalogue-2026-11/nils-holgersson/04-160.webp",
+            "/PRODUITS/Catalogue-2026-11/nils-holgersson/05-160.webp",
+            "/PRODUITS/Catalogue-2026-11/nils-holgersson/06-160.webp",
+            "/PRODUITS/Catalogue-2026-11/nils-holgersson/07-160.webp",
+            "/PRODUITS/Catalogue-2026-11/nils-holgersson/08-160.webp"
+        ],
+        "desc": "Le voyage de Nils à travers la Suède, dans la traduction de T. Hammar illustrée par Roger Reboussin. Demi-reliure bordeaux, plats marbrés ocre et titre doré.\n\nAuteur : Selma Lagerlöf\nÉdition : Paris, Librairie Delagrave, 15 rue Soufflot, 1949. Année lisible sur la page de titre. La justification mentionne plusieurs grands papiers, sans numéro individuel visible pour ce volume : aucun tirage de tête n’est revendiqué.\n\nPrésentation et état : Feuillets et tranches jaunis ; état de la reliure présenté dans la galerie.\n\nLes photographies présentent le volume proposé. La complétude et la solidité des cahiers ne sont pas certifiées par les seules images ; elles restent à vérifier sur le livre.\n\nPrix proposé : 35 €, hors livraison.\nAnnonce Leboncoin à venir.",
+        "author": "Selma Lagerlöf",
+        "year": "1949"
+    },
+    {
+        "id": 114,
+        "title": "Le Rouge et le Noir — Stendhal — Reliure rouge orangé",
+        "category": "Romans & contes",
+        "price": 15.0,
+        "lb_url": null,
+        "img": "/PRODUITS/Catalogue-2026-11/rouge-et-noir/05-1200.webp",
+        "card_img": "/PRODUITS/Catalogue-2026-11/rouge-et-noir/05-640.webp",
+        "images": [
+            "/PRODUITS/Catalogue-2026-11/rouge-et-noir/05-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/rouge-et-noir/01-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/rouge-et-noir/02-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/rouge-et-noir/03-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/rouge-et-noir/04-1200.webp"
+        ],
+        "thumbnails": [
+            "/PRODUITS/Catalogue-2026-11/rouge-et-noir/05-160.webp",
+            "/PRODUITS/Catalogue-2026-11/rouge-et-noir/01-160.webp",
+            "/PRODUITS/Catalogue-2026-11/rouge-et-noir/02-160.webp",
+            "/PRODUITS/Catalogue-2026-11/rouge-et-noir/03-160.webp",
+            "/PRODUITS/Catalogue-2026-11/rouge-et-noir/04-160.webp"
+        ],
+        "desc": "Le roman de Stendhal, sous-titré Chronique du XIXe siècle, dans une reliure rouge orangé avec titre doré au dos et vignette noire au premier plat.\n\nAuteur : Stendhal\nÉdition : Rapprochement probable avec les Classiques Garnier, texte établi et annoté par Henri Martineau, vers 1960. Éditeur, année et pagination de cet exemplaire à confirmer au copyright. La reproduction d’un ancien titre Levavasseur à l’intérieur n’en fait pas une édition originale.\n\nPrésentation et état : Petite usure en pied du dos. Un volume physique est proposé ; contenu et pagination à vérifier sur le livre.\n\nLes photographies présentent le volume proposé. La complétude et la solidité des cahiers ne sont pas certifiées par les seules images ; elles restent à vérifier sur le livre.\n\nPrix proposé : 15 €, hors livraison.\nAnnonce Leboncoin à venir.",
+        "author": "Stendhal",
+        "year": null
+    },
+    {
+        "id": 115,
+        "title": "Les Nuits secrètes de Paris — Guy Breton — Reliure noire décorée",
+        "category": "Histoire",
+        "price": 8.0,
+        "lb_url": null,
+        "img": "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/05-1200.webp",
+        "card_img": "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/05-640.webp",
+        "images": [
+            "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/05-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/01-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/02-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/03-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/04-1200.webp"
+        ],
+        "thumbnails": [
+            "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/05-160.webp",
+            "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/01-160.webp",
+            "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/02-160.webp",
+            "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/03-160.webp",
+            "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/04-160.webp"
+        ],
+        "desc": "Guy Breton explore les aspects secrets et occultes de Paris. La reliure noire grainée porte des décors rouges et dorés représentant une main et une flamme, avec un signet rouge.\n\nAuteur : Guy Breton\nÉdition : Titre et auteur identifiés au dos. L’ouvrage est documenté chez Noir et Blanc en 1963 et a connu des rééditions ; éditeur et année de ce volume ne sont pas établis faute de page de titre et de copyright photographiés.\n\nPrésentation et état : Gardes rouges et illustration photographique encadrée de rouge. La matière de la reliure n’est pas certifiée comme cuir.\n\nLes photographies présentent le volume proposé. La complétude et la solidité des cahiers ne sont pas certifiées par les seules images ; elles restent à vérifier sur le livre.\n\nPrix proposé : 8 €, hors livraison.\nAnnonce Leboncoin à venir.",
+        "author": "Guy Breton",
+        "year": null
+    },
+    {
+        "id": 116,
+        "title": "François Coppée — Théâtre et Prose — Lot de 2 volumes illustrés",
+        "category": "Poésie & théâtre",
+        "price": 40.0,
+        "lb_url": null,
+        "img": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/09-1200.webp",
+        "card_img": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/09-640.webp",
+        "images": [
+            "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/09-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/01-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/02-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/03-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/04-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/05-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/06-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/07-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/08-1200.webp"
+        ],
+        "thumbnails": [
+            "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/09-160.webp",
+            "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/01-160.webp",
+            "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/02-160.webp",
+            "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/03-160.webp",
+            "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/04-160.webp",
+            "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/05-160.webp",
+            "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/06-160.webp",
+            "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/07-160.webp",
+            "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/08-160.webp"
+        ],
+        "desc": "Deux volumes des Œuvres complètes de François Coppée, en demi-reliures sombres à coins, dos à nerfs et caissons dorés, avec plats et gardes marbrés.\n\nAuteur : François Coppée\nÉdition : Paris, Alphonse Lemerre, édition illustrée de dessins de F. de Myrbach. Tome II : Théâtre, œuvres de 1869 à 1889 ; tome III : Prose, œuvres de 1873 à 1890. Les dates d’impression 1892 et 1893 sont probables par bibliographie, à confirmer sur les volumes. Le lot ne constitue pas les œuvres complètes intégrales.\n\nPrésentation et état : Usures visibles aux extrémités et aux charnières. Prix de 40 € pour les deux volumes réunis.\n\nLes photographies présentent le volume proposé. La complétude et la solidité des cahiers ne sont pas certifiées par les seules images ; elles restent à vérifier sur le livre.\n\nPrix proposé : 40 € pour les deux volumes réunis.\nAnnonce Leboncoin à venir.",
+        "author": "François Coppée",
+        "year": null
+    },
+    {
+        "id": 117,
+        "title": "Petites Nouvelles — Mme Colomb — Cartonnage aux marguerites dorées",
+        "category": "Romans & contes",
+        "price": 12.0,
+        "lb_url": null,
+        "img": "/PRODUITS/Catalogue-2026-11/petites-nouvelles/06-1200.webp",
+        "card_img": "/PRODUITS/Catalogue-2026-11/petites-nouvelles/06-640.webp",
+        "images": [
+            "/PRODUITS/Catalogue-2026-11/petites-nouvelles/06-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/petites-nouvelles/01-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/petites-nouvelles/02-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/petites-nouvelles/03-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/petites-nouvelles/04-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/petites-nouvelles/05-1200.webp"
+        ],
+        "thumbnails": [
+            "/PRODUITS/Catalogue-2026-11/petites-nouvelles/06-160.webp",
+            "/PRODUITS/Catalogue-2026-11/petites-nouvelles/01-160.webp",
+            "/PRODUITS/Catalogue-2026-11/petites-nouvelles/02-160.webp",
+            "/PRODUITS/Catalogue-2026-11/petites-nouvelles/03-160.webp",
+            "/PRODUITS/Catalogue-2026-11/petites-nouvelles/04-160.webp",
+            "/PRODUITS/Catalogue-2026-11/petites-nouvelles/05-160.webp"
+        ],
+        "desc": "Un recueil de Mme Colomb dans un cartonnage rouge à grandes marguerites dorées, de la Bibliothèque des écoles et des familles.\n\nAuteur : Mme Colomb (Joséphine Colomb)\nÉdition : Collection Hachette ; titre et nom Colomb identifiés au dos. La page de titre n’est pas photographiée : année, rang d’édition et pagination restent à confirmer.\n\nPrésentation et état : Haut du dos nettement usé et déchiré ; renforts de papier visibles aux gardes. Étiquette scolaire au nom de Cauvin Lucette, sans date certifiée.\n\nLes photographies présentent le volume proposé. La complétude et la solidité des cahiers ne sont pas certifiées par les seules images ; elles restent à vérifier sur le livre.\n\nPrix proposé : 12 €, hors livraison.\nAnnonce Leboncoin à venir.",
+        "author": "Mme Colomb (Joséphine Colomb)",
+        "year": null
+    },
+    {
+        "id": 118,
+        "title": "Quentin Durward — Walter Scott — Armand Colin, 1934 — Prix municipal",
+        "category": "Romans & contes",
+        "price": 20.0,
+        "lb_url": null,
+        "img": "/PRODUITS/Catalogue-2026-11/quentin-durward/01-1200.webp",
+        "card_img": "/PRODUITS/Catalogue-2026-11/quentin-durward/01-640.webp",
+        "images": [
+            "/PRODUITS/Catalogue-2026-11/quentin-durward/01-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/quentin-durward/02-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/quentin-durward/03-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/quentin-durward/04-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/quentin-durward/05-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/quentin-durward/06-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/quentin-durward/07-1200.webp"
+        ],
+        "thumbnails": [
+            "/PRODUITS/Catalogue-2026-11/quentin-durward/01-160.webp",
+            "/PRODUITS/Catalogue-2026-11/quentin-durward/02-160.webp",
+            "/PRODUITS/Catalogue-2026-11/quentin-durward/03-160.webp",
+            "/PRODUITS/Catalogue-2026-11/quentin-durward/04-160.webp",
+            "/PRODUITS/Catalogue-2026-11/quentin-durward/05-160.webp",
+            "/PRODUITS/Catalogue-2026-11/quentin-durward/06-160.webp",
+            "/PRODUITS/Catalogue-2026-11/quentin-durward/07-160.webp"
+        ],
+        "desc": "Le roman historique de Walter Scott, dans un cartonnage rouge aux armes de la Ville de Paris et à la mention dorée Prix municipal.\n\nAuteur : Walter Scott\nÉdition : Paris, Librairie Armand Colin, 1934. Adaptation de M. Guéchot d’après la traduction Defauconpret ; illustrations d’Albert Robida. Rang d’édition à confirmer. L’étiquette scolaire porte 1937 : cette date de remise du prix est distincte de l’année de publication.\n\nPrésentation et état : Tranches jaunies ; état du cartonnage, du dos et de l’étiquette présenté dans la galerie.\n\nLes photographies présentent le volume proposé. La complétude et la solidité des cahiers ne sont pas certifiées par les seules images ; elles restent à vérifier sur le livre.\n\nPrix proposé : 20 €, hors livraison.\nAnnonce Leboncoin à venir.",
+        "author": "Walter Scott",
+        "year": "1934"
+    },
+    {
+        "id": 119,
+        "title": "Robinson Crusoé — Daniel Defoe — Illustrations de Josef Kremláček",
+        "category": "Romans & contes",
+        "price": 20.0,
+        "lb_url": null,
+        "img": "/PRODUITS/Catalogue-2026-11/robinson-crusoe/05-1200.webp",
+        "card_img": "/PRODUITS/Catalogue-2026-11/robinson-crusoe/05-640.webp",
+        "images": [
+            "/PRODUITS/Catalogue-2026-11/robinson-crusoe/05-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/robinson-crusoe/01-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/robinson-crusoe/02-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/robinson-crusoe/03-1200.webp",
+            "/PRODUITS/Catalogue-2026-11/robinson-crusoe/04-1200.webp"
+        ],
+        "thumbnails": [
+            "/PRODUITS/Catalogue-2026-11/robinson-crusoe/05-160.webp",
+            "/PRODUITS/Catalogue-2026-11/robinson-crusoe/01-160.webp",
+            "/PRODUITS/Catalogue-2026-11/robinson-crusoe/02-160.webp",
+            "/PRODUITS/Catalogue-2026-11/robinson-crusoe/03-160.webp",
+            "/PRODUITS/Catalogue-2026-11/robinson-crusoe/04-160.webp"
+        ],
+        "desc": "Une adaptation illustrée en couleurs du roman de Daniel Defoe, dans une reliure claire au titre et à l’encadrement végétal dorés.\n\nAuteur : Daniel Defoe\nÉdition : Presses de la Renaissance. Traduction de Pétrus Borel adaptée par Myriam Viliker ; illustrations de Josef Kremláček. Mention Au Club de l’Honnête Homme sur la reliure. Le rapprochement bibliographique conduit à 1970, année et diffusion exacte à confirmer au copyright.\n\nPrésentation et état : Reliure claire décorée et illustrations intérieures visibles sur les photographies ; aucun tirage limité n’est revendiqué.\n\nLes photographies présentent le volume proposé. La complétude et la solidité des cahiers ne sont pas certifiées par les seules images ; elles restent à vérifier sur le livre.\n\nPrix proposé : 20 €, hors livraison.\nAnnonce Leboncoin à venir.",
+        "author": "Daniel Defoe",
+        "year": null
+    }
+];
 
         const reviews = [
 
@@ -1145,9 +1456,9 @@ Bon état général pour un ouvrage ancien.`
         function safeUrl(url) {
             try {
                 const u = new URL(url);
-                if (u.protocol === 'https:' && u.hostname.endsWith('leboncoin.fr')) return u.toString();
+                if (u.protocol === 'https:' && ['leboncoin.fr', 'www.leboncoin.fr'].includes(u.hostname) && !u.username && !u.password && !u.port) return u.toString();
             } catch (e) {}
-            return '#';
+            return null;
         }
 
         let cart = loadCart();
@@ -1253,17 +1564,18 @@ Conditions de vente et garanties régies par Leboncoin.fr`);
             const script = document.getElementById('book-ld-json');
             if (!script) return;
             const graph = books.map(b => ({
-                "@type": ["Product", "Book"],
+                "@type": "Book",
                 "name": b.title,
                 "image": (b.images && b.images.length) ? b.images : [b.img],
                 "description": String(b.desc || '').replace(/\s+/g, ' ').trim(),
-                "offers": {
+                ...(safeUrl(b.lb_url) ? { "offers": {
                     "@type": "Offer",
                     "priceCurrency": "EUR",
                     "price": b.price,
-                    "url": b.lb_url,
-                    "availability": "https://schema.org/InStock"
-                }
+                    "url": safeUrl(b.lb_url)
+                }} : {}),
+                ...(b.author ? { "author": { "@type": "Person", "name": b.author } } : {}),
+                ...(b.year ? { "datePublished": b.year } : {})
             }));
             script.textContent = JSON.stringify({ "@context": "https://schema.org", "@graph": graph });
         }
@@ -1279,7 +1591,9 @@ Conditions de vente et garanties régies par Leboncoin.fr`);
         function renderShop() {
             const grid = document.getElementById('shop-grid');
             grid.textContent = '';
-            const filtered = books.filter(b => (currentFilter === 'all' || b.category === currentFilter) && b.title.toLowerCase().includes(currentSearch.toLowerCase()));
+            const normalize = value => String(value).normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase().replace(/[’']/g, ' ');
+            const words = normalize(currentSearch).split(/\s+/).filter(Boolean);
+            const filtered = books.filter(b => (currentFilter === 'all' || b.category === currentFilter) && words.every(word => normalize([b.title, b.author || '', b.year || '', b.desc].join(' ')).includes(word)));
             const frag = document.createDocumentFragment();
             filtered.forEach(book => frag.appendChild(createCard(book)));
             grid.appendChild(frag);
@@ -1298,8 +1612,8 @@ Conditions de vente et garanties régies par Leboncoin.fr`);
             div.className = 'card';
 
             const img = document.createElement('img');
-            img.src = book.img;
-            img.className = 'card-img';
+            img.src = book.card_img || book.img;
+            img.className = 'card-img' + (book.card_img ? ' final-photo' : '');
             img.alt = book.title;
             img.loading = 'lazy';
             img.decoding = 'async';
@@ -1339,6 +1653,12 @@ Conditions de vente et garanties régies par Leboncoin.fr`);
             btn.dataset.addToCart = book.id;
 
             bottom.appendChild(price);
+            if (!safeUrl(book.lb_url)) {
+                const status = document.createElement('p');
+                status.className = 'listing-status';
+                status.textContent = 'Annonce Leboncoin à venir';
+                bottom.appendChild(status);
+            }
             bottom.appendChild(btn);
 
             info.appendChild(top);
@@ -1408,6 +1728,7 @@ Conditions de vente et garanties régies par Leboncoin.fr`);
             document.getElementById('modal-cat').innerText = book.category;
             document.getElementById('modal-title').innerText = book.title;
             document.getElementById('modal-price').innerText = book.price.toLocaleString() + ' €';
+            document.getElementById('modal-listing-status').textContent = safeUrl(book.lb_url) ? '' : 'Annonce Leboncoin à venir';
             document.getElementById('modal-desc').innerText = book.desc;
 
             const gallery = document.getElementById('modal-gallery');
@@ -1415,7 +1736,8 @@ Conditions de vente et garanties régies par Leboncoin.fr`);
             if (book.images) {
                 book.images.forEach((imgUrl, idx) => {
                     const thumb = document.createElement('img');
-                    thumb.src = imgUrl;
+                    thumb.src = book.thumbnails?.[idx] || imgUrl;
+                    thumb.alt = book.title + ' — photographie ' + (idx + 1) + ' sur ' + book.images.length;
                     thumb.className = 'gallery-thumb' + (idx === 0 ? ' active' : '');
                     thumb.loading = 'lazy';
                     thumb.decoding = 'async';
@@ -1464,7 +1786,7 @@ Conditions de vente et garanties régies par Leboncoin.fr`);
                 row.className = 'cart-item';
 
                 const img = document.createElement('img');
-                img.src = item.img;
+                img.src = item.card_img || item.img;
                 img.width = 50;
                 img.height = 65;
                 img.loading = 'lazy';
@@ -1548,7 +1870,7 @@ Conditions de vente et garanties régies par Leboncoin.fr`);
                 info.className = 'redirection-info';
 
                 const img = document.createElement('img');
-                img.src = item.img;
+                img.src = item.card_img || item.img;
                 img.width = 70;
                 img.height = 90;
                 img.loading = 'lazy';
@@ -1582,12 +1904,18 @@ Conditions de vente et garanties régies par Leboncoin.fr`);
                 actions.style.alignItems = 'flex-end';
                 actions.style.gap = '10px';
 
-                const link = document.createElement('a');
-                link.href = safeUrl(item.lb_url);
-                link.target = '_blank';
-                link.rel = 'noopener noreferrer';
-                link.className = 'btn btn-lb';
-                link.textContent = 'Finaliser sur Leboncoin ↗';
+                const listingUrl = safeUrl(item.lb_url);
+                const link = document.createElement(listingUrl ? 'a' : 'p');
+                if (listingUrl) {
+                    link.href = listingUrl;
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                    link.className = 'btn btn-lb';
+                    link.textContent = 'Consulter l’annonce Leboncoin ↗';
+                } else {
+                    link.className = 'listing-status';
+                    link.textContent = 'Annonce Leboncoin à venir. Vous pouvez conserver ce livre dans votre sélection.';
+                }
 
                 const remove = document.createElement('button');
                 remove.className = 'btn';
