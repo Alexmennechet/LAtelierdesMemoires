@@ -5,7 +5,7 @@ import { createHash } from "node:crypto";
 import { escapeHtml as e, marketUrl } from "../src/model.mjs";
 import { card, gallery, bookInfo, bookPath } from "../src/views.mjs";
 import { buildEnglish } from "./english.mjs";
-import { productSchema } from "../src/seo.mjs";
+import { pageGraph } from "../src/seo.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const out = resolve(root, "dist");
@@ -136,6 +136,7 @@ function layout({
   body,
   active = path,
   book,
+  guide,
   noindex = false,
   lang = "fr",
   alternates,
@@ -145,52 +146,20 @@ function layout({
   const canonical = site.url + path;
   const image =
     site.url +
-    (book
-      ? book.images[0].variants.at(-1).src
-      : "/assets/images/banniere-1280.webp");
-  const schema = book
-    ? productSchema(book, site, canonical)
-    : {
-        "@type": "WebSite",
-        "@id": site.url + "/#website",
-        name: site.name,
-        url: site.url + "/",
-      };
-  const graph = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": site.url + "/#organization",
-        name: site.name,
-        url: site.url + "/",
-        logo: site.url + "/assets/images/logo-180.png",
-        sameAs: [site.seller.profileUrl].filter(Boolean),
-      },
-      schema,
-      ...(book
-        ? [
-            {
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: en ? "Books" : "Boutique",
-                  item: site.url + (en ? "/en/" : "/boutique/"),
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: book.title,
-                  item: canonical,
-                },
-              ],
-            },
-          ]
-        : []),
-    ],
-  };
+    (guide
+      ? guide.image.variants.at(-1).src
+      : book
+        ? book.images[0].variants.at(-1).src
+        : "/assets/images/banniere-1280.webp");
+  const graph = pageGraph({
+    site,
+    title,
+    description,
+    path,
+    lang,
+    book,
+    guide,
+  });
   if (!alternates) {
     const translated = book && translations.books.some((b) => b.id === book.id);
     alternates = translated
@@ -225,14 +194,17 @@ function layout({
         ${alternates.map((a) => `<link rel="alternate" hreflang="${a.lang}" href="${e(site.url + a.path)}">`).join("")}
         <meta property="og:locale" content="${en ? "en_GB" : "fr_FR"}" />
         <meta property="og:site_name" content="${e(site.name)}" />
-        <meta property="og:type" content="${book ? "book" : "website"}" />
+        <meta
+          property="og:type"
+          content="${guide ? "article" : book ? "book" : "website"}"
+        />
         <meta property="og:title" content="${e(fullTitle)}" />
         <meta property="og:description" content="${e(description)}" />
         <meta property="og:url" content="${e(canonical)}" />
         <meta property="og:image" content="${e(image)}" />
         <meta
           property="og:image:alt"
-          content="${e(book?.title || "Livres anciens de L’Atelier des Mémoires")}"
+          content="${e(guide?.image.alt || book?.title || "Livres anciens de L’Atelier des Mémoires")}"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="${e(fullTitle)}" />
@@ -396,7 +368,7 @@ async function page(config) {
   if (!config.noindex)
     pages.push({
       path: config.path,
-      lastmod: config.book?.updated || site.updated,
+      lastmod: config.guide?.updated || config.book?.updated || site.updated,
       book: config.book,
     });
 }
@@ -812,11 +784,36 @@ await page({
 for (const guide of guides) {
   if (!/^[a-z0-9-]+$/.test(guide.slug) || !/^[a-z0-9-]+\.md$/.test(guide.file))
     throw Error("Invalid guide path");
+  for (const date of [guide.published, guide.updated]) {
+    if (
+      !/^\d{4}-\d{2}-\d{2}$/.test(date) ||
+      new Date(date).toISOString().slice(0, 10) !== date
+    )
+      throw Error(`Invalid guide date: ${guide.slug}`);
+  }
+  if (guide.updated < guide.published)
+    throw Error(`Guide updated before publication: ${guide.slug}`);
+  const example = books.find((book) => book.id === guide.illustration?.bookId);
+  const image = example?.images[guide.illustration?.imageIndex];
+  if (
+    !image ||
+    !guide.relatedBookIds.includes(example.id) ||
+    !guide.illustration.caption
+  )
+    throw Error(`Invalid guide illustration: ${guide.slug}`);
+  const largest = image.variants.at(-1);
+  const dateLabel = new Intl.DateTimeFormat("fr-FR", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "Europe/Paris",
+  }).format(new Date(guide.published));
   await page({
     path: `/guides/${guide.slug}/`,
     title: guide.title,
     description: guide.description,
-    body: `<article class="prose section"><nav class="breadcrumbs" aria-label="Fil d’Ariane"><a href="/guides/">Guides</a><span aria-hidden="true">/</span><span>${e(guide.title)}</span></nav><h1>${e(guide.title)}</h1>${markdown(await readFile(join(root, "content", guide.file), "utf8"))}<h2>Examiner les exemplaires cités</h2><ul>${guide.relatedBookIds
+    guide: { ...guide, image },
+    body: `<article class="prose section"><nav class="breadcrumbs" aria-label="Fil d’Ariane"><a href="/guides/">Guides</a><span aria-hidden="true">/</span><span>${e(guide.title)}</span></nav><h1>${e(guide.title)}</h1><p class="muted">Un guide de <a href="/a-propos/">${e(site.name)}</a> · Publié le <time datetime="${guide.published}">${e(dateLabel)}</time></p><figure class="guide-illustration"><a href="${bookPath(example)}"><img src="${e(largest.src)}" srcset="${image.variants.map((variant) => `${e(variant.src)} ${variant.width}w`).join(", ")}" sizes="(max-width: 760px) 100vw, 800px" width="${largest.width}" height="${largest.height}" alt="${e(image.alt)}" decoding="async"></a><figcaption>${e(guide.illustration.caption)} <a href="${bookPath(example)}">Voir la fiche de cet exemplaire</a>.</figcaption></figure>${markdown(await readFile(join(root, "content", guide.file), "utf8"))}<h2>Examiner les exemplaires cités</h2><ul>${guide.relatedBookIds
       .map((id) => books.find((b) => b.id === id))
       .filter(Boolean)
       .map((b) => `<li><a href="${bookPath(b)}">${e(b.title)}</a></li>`)

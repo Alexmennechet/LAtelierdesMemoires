@@ -13,6 +13,7 @@ const books = await json("../data/books.json");
 const media = await json("../data/media.json");
 const baseline = await json("./fixtures/catalogue-avant-seo.json");
 const site = await json("../data/site.json");
+const guides = await json("../data/guides.json");
 const expected = {
   104: [30, 8],
   105: [15, 5],
@@ -372,6 +373,74 @@ test("three English pilots retain own canonicals and reciprocal language links",
       const offer = nodes.find((n) => hasType(n, "Offer"));
       assert.equal(Number(offer?.price), b.price);
       assert.equal(offer?.priceCurrency, "EUR");
+    }
+  }
+});
+
+test("guides expose Article and breadcrumbs that match visible dates, publisher and original illustrations", async () => {
+  for (const guide of guides) {
+    const url = `${site.url}/guides/${guide.slug}/`;
+    const html = await readFile(distFile(url), "utf8");
+    const nodes = structured(html);
+    const article = nodes.find((node) => hasType(node, "Article"));
+    assert.ok(article, guide.slug);
+    assert.equal(article.headline, guide.title);
+    assert.equal(article.datePublished, guide.published);
+    assert.equal(article.dateModified, guide.updated);
+    assert.equal(article.mainEntityOfPage["@id"], url + "#webpage");
+    assert.equal(article.author["@id"], site.url + "/#organization");
+    assert.ok(html.includes(`<time datetime="${guide.published}">`));
+    const image =
+      media[guide.illustration.bookId][guide.illustration.imageIndex];
+    assert.equal(article.image, site.url + image.variants.at(-1).src);
+    assert.ok(html.includes(`src="${image.variants.at(-1).src}"`));
+    assert.match(html, /<meta\s+property="og:type"\s+content="article"\s*\/?>/);
+    const breadcrumb = nodes.find((node) => hasType(node, "BreadcrumbList"));
+    assert.deepEqual(
+      breadcrumb.itemListElement.map((item) => [item.position, item.item]),
+      [
+        [1, site.url + "/guides/"],
+        [2, url],
+      ],
+    );
+    assert.ok(
+      !nodes.some((node) => hasType(node, "Product")),
+      "A guide is not a product offer",
+    );
+  }
+});
+
+test("page graphs identify collection, contact and product pages without changing book language or stock", async () => {
+  for (const [path, type, language] of [
+    ["/boutique/", "CollectionPage", "fr"],
+    ["/guides/", "CollectionPage", "fr"],
+    ["/contact/", "ContactPage", "fr"],
+    ["/en/", "CollectionPage", "en"],
+    ["/en/contact-shipping/", "ContactPage", "en"],
+    ["/livres/berthe-devoir-accompli/", "ItemPage", "fr"],
+    ["/en/books/berthe-devoir-accompli/", "ItemPage", "en"],
+  ]) {
+    const url = site.url + path;
+    const nodes = structured(await readFile(distFile(path), "utf8"));
+    const page = nodes.find(
+      (node) => hasType(node, type) && node["@id"] === url + "#webpage",
+    );
+    assert.ok(page, path);
+    assert.equal(page.inLanguage, language);
+    assert.equal(page.isPartOf["@id"], site.url + "/#website");
+    if (type === "ItemPage") {
+      assert.equal(page.mainEntity["@id"], url + "#book");
+      const book = nodes.find((node) => hasType(node, "Book"));
+      assert.equal(
+        book.inLanguage,
+        "fr",
+        "An English description does not translate the physical book",
+      );
+      assert.equal(
+        book.offers.availability,
+        undefined,
+        "Unknown stock remains omitted",
+      );
     }
   }
 });

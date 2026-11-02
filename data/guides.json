@@ -4,20 +4,41 @@
     "file": "guide-dater-un-livre.md",
     "title": "Comment lire la date d’un livre ancien ?",
     "description": "Distinguer date de publication, réédition, inscription et prix scolaire, avec des exemples photographiés du catalogue.",
-    "relatedBookIds": [102, 118]
+    "relatedBookIds": [102, 118],
+    "published": "2026-11-02",
+    "updated": "2026-11-02",
+    "illustration": {
+      "bookId": 102,
+      "imageIndex": 1,
+      "caption": "La page de titre de Notre Belle Patrie indique 1911 et la septième édition."
+    }
   },
   {
     "slug": "observer-etat-livre-ancien",
     "file": "guide-observer-etat-livre.md",
     "title": "Observer l’état d’un livre ancien avant l’achat",
     "description": "Les vues utiles pour examiner reliure, pages et illustrations, sans confondre beau décor, édition et complétude.",
-    "relatedBookIds": [117, 116]
+    "relatedBookIds": [117, 116],
+    "published": "2026-11-02",
+    "updated": "2026-11-02",
+    "illustration": {
+      "bookId": 117,
+      "imageIndex": 5,
+      "caption": "Le dos et le cartonnage de Petites Nouvelles : deux surfaces à examiner avec les vues intérieures."
+    }
   },
   {
     "slug": "cartonnages-illustres",
     "file": "guide-cartonnages-illustres.md",
     "title": "Cartonnages illustrés : regarder le décor d’un livre ancien",
     "description": "Couleurs, motifs et décors dorés : comprendre les cartonnages d’éditeur et comparer les vues d’un exemplaire avant l’achat.",
-    "relatedBookIds": [108, 113, 114]
+    "relatedBookIds": [108, 113, 114],
+    "published": "2026-11-02",
+    "updated": "2026-11-02",
+    "illustration": {
+      "bookId": 108,
+      "imageIndex": 0,
+      "caption": "Le cartonnage rouge de Berthe ou Le Devoir accompli et ses motifs noirs et dorés."
+    }
   }
 ]
