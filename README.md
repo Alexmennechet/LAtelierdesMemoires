@@ -53,6 +53,12 @@ Les seules coordonnées publiques retenues sont Paris et les accès Leboncoin ex
 
 Les pages contact, livraison, informations de publication et confidentialité décrivent le fonctionnement actuel. Elles ne constituent pas une certification de conformité juridique pour une future activité professionnelle. Aucune immatriculation, politique de retour professionnelle ou possibilité de paiement direct n’est inventée. Les évaluations restent consultables à leur source sur le profil Leboncoin ; aucune note ni quantité de ventes non vérifiée n’est affichée.
 
+## Guides et données structurées
+
+Les trois guides affichent leur publication, la marque éditrice et une photographie pertinente déjà conservée dans le catalogue. `data/guides.json` fixe ces dates et la référence de l’illustration ; elles ne sont pas recalculées à chaque build. Lors d’une vraie révision, modifier `updated`, conserver `published` et actualiser le texte visible si la date de modification change. Le générateur réutilise les images sans retouche et leurs légendes observées.
+
+Le graphe JSON-LD distingue le site, chaque page, les livres et les articles. Les guides portent Article et un fil d’Ariane correspondant aux liens visibles ; les catalogues sont des CollectionPage, les fiches des ItemPage et les contacts des ContactPage. Les livres présentés en anglais restent des exemplaires de langue française. Les statuts inconnus ne deviennent pas du stock disponible. Ce balisage ne garantit ni classement ni résultat enrichi. Références : [Google Article](https://developers.google.com/search/docs/appearance/structured-data/article), [fils d’Ariane](https://developers.google.com/search/docs/appearance/structured-data/breadcrumb).
+
 ## Mesure
 
 Google Search Console reste la source de suivi organique : pages, requêtes disponibles, impressions, clics, pays et appareils. L’application émet des événements locaux `atelier:interaction` (`view_book`, `view_photo`, `add_selection`, `remove_selection`, `outbound_listing`) avec la référence et la langue. Ils ne sont ni conservés ni transmis à un collecteur ; ils servent de point d’intégration vérifiable pour une mesure ultérieure adaptée. Aucun nouveau traceur publicitaire ou service d’audience n’est activé. Un clic vers Leboncoin n’est jamais compté comme vente.

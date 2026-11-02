@@ -108,6 +108,8 @@ try {
     "/contact/",
     "/livraison/",
     "/guides/",
+    "/guides/dater-un-livre-ancien/",
+    "/guides/observer-etat-livre-ancien/",
     "/guides/cartonnages-illustres/",
     "/en/",
     "/en/contact-shipping/",
