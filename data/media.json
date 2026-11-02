@@ -1,0 +1,2604 @@
+{
+  "101": [
+    {
+      "alt": "Carnet de 1918 : double page manuscrite illustrée de schémas militaires.",
+      "variants": [
+        {
+          "src": "/assets/images/carnet-original-1918-1-160.webp",
+          "width": 160,
+          "height": 213
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-1-320.webp",
+          "width": 320,
+          "height": 427
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-1-600.webp",
+          "width": 600,
+          "height": 800
+        }
+      ],
+      "caption": "Double page manuscrite illustrée de schémas militaires."
+    },
+    {
+      "alt": "Carnet de 1918 : montage de la couverture et de pages illustrées du carnet.",
+      "variants": [
+        {
+          "src": "/assets/images/carnet-original-1918-2-160.webp",
+          "width": 160,
+          "height": 113
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-2-320.webp",
+          "width": 320,
+          "height": 226
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-2-640.webp",
+          "width": 640,
+          "height": 453
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-2-1131.webp",
+          "width": 1131,
+          "height": 800
+        }
+      ],
+      "caption": "Montage de la couverture et de pages illustrées du carnet."
+    },
+    {
+      "alt": "Carnet de 1918 : croquis de silhouettes féminines.",
+      "variants": [
+        {
+          "src": "/assets/images/carnet-original-1918-3-160.webp",
+          "width": 160,
+          "height": 209
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-3-320.webp",
+          "width": 320,
+          "height": 418
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-3-612.webp",
+          "width": 612,
+          "height": 800
+        }
+      ],
+      "caption": "Croquis de silhouettes féminines."
+    },
+    {
+      "alt": "Carnet de 1918 : page manuscrite illustrée portant la date 1918 et le nom E. Hervet.",
+      "variants": [
+        {
+          "src": "/assets/images/carnet-original-1918-4-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-4-320.webp",
+          "width": 320,
+          "height": 240
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-4-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-4-1067.webp",
+          "width": 1067,
+          "height": 800
+        }
+      ],
+      "caption": "Page manuscrite illustrée portant la date 1918 et le nom E. Hervet."
+    },
+    {
+      "alt": "Carnet de 1918 : page décorative Pour Elle, datée de 1918 et portant le nom E. Hervet.",
+      "variants": [
+        {
+          "src": "/assets/images/carnet-original-1918-5-160.webp",
+          "width": 160,
+          "height": 213
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-5-320.webp",
+          "width": 320,
+          "height": 427
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-5-600.webp",
+          "width": 600,
+          "height": 800
+        }
+      ],
+      "caption": "Page décorative Pour Elle, datée de 1918 et portant le nom E. Hervet."
+    },
+    {
+      "alt": "Carnet de 1918 : montage de croquis de mode, de la couverture et de pages décorées.",
+      "variants": [
+        {
+          "src": "/assets/images/carnet-original-1918-6-160.webp",
+          "width": 160,
+          "height": 114
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-6-320.webp",
+          "width": 320,
+          "height": 227
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-6-640.webp",
+          "width": 640,
+          "height": 454
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-6-1127.webp",
+          "width": 1127,
+          "height": 800
+        }
+      ],
+      "caption": "Montage de croquis de mode, de la couverture et de pages décorées."
+    },
+    {
+      "alt": "Carnet de 1918 : couverture claire du carnet fermé.",
+      "variants": [
+        {
+          "src": "/assets/images/carnet-original-1918-7-160.webp",
+          "width": 160,
+          "height": 122
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-7-320.webp",
+          "width": 320,
+          "height": 244
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-7-596.webp",
+          "width": 596,
+          "height": 455
+        }
+      ],
+      "caption": "Couverture claire du carnet fermé."
+    },
+    {
+      "alt": "Carnet de 1918 : double page manuscrite avec dessins militaires.",
+      "variants": [
+        {
+          "src": "/assets/images/carnet-original-1918-8-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-8-320.webp",
+          "width": 320,
+          "height": 240
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-8-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/carnet-original-1918-8-1067.webp",
+          "width": 1067,
+          "height": 800
+        }
+      ],
+      "caption": "Double page manuscrite avec dessins militaires."
+    }
+  ],
+  "102": [
+    {
+      "alt": "Notre Belle Patrie : inscription Offert par Monsieur A. Dalimier sur le faux-titre.",
+      "variants": [
+        {
+          "src": "/assets/images/notre-belle-patrie-1-160.webp",
+          "width": 160,
+          "height": 215
+        },
+        {
+          "src": "/assets/images/notre-belle-patrie-1-320.webp",
+          "width": 320,
+          "height": 431
+        },
+        {
+          "src": "/assets/images/notre-belle-patrie-1-594.webp",
+          "width": 594,
+          "height": 800
+        }
+      ],
+      "caption": "Inscription Offert par Monsieur A. Dalimier sur le faux-titre."
+    },
+    {
+      "alt": "Notre Belle Patrie : page de titre : J. Monnier, septième édition, Hachette, 1911.",
+      "variants": [
+        {
+          "src": "/assets/images/notre-belle-patrie-2-160.webp",
+          "width": 160,
+          "height": 232
+        },
+        {
+          "src": "/assets/images/notre-belle-patrie-2-320.webp",
+          "width": 320,
+          "height": 464
+        },
+        {
+          "src": "/assets/images/notre-belle-patrie-2-552.webp",
+          "width": 552,
+          "height": 800
+        }
+      ],
+      "caption": "Page de titre : J. Monnier, septième édition, Hachette, 1911."
+    },
+    {
+      "alt": "Notre Belle Patrie : livre ouvert montrant un frontispice et la page de titre datée de 1911.",
+      "variants": [
+        {
+          "src": "/assets/images/notre-belle-patrie-3-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/assets/images/notre-belle-patrie-3-320.webp",
+          "width": 320,
+          "height": 240
+        },
+        {
+          "src": "/assets/images/notre-belle-patrie-3-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/notre-belle-patrie-3-800.webp",
+          "width": 800,
+          "height": 600
+        }
+      ],
+      "caption": "Livre ouvert montrant un frontispice et la page de titre datée de 1911."
+    }
+  ],
+  "103": [
+    {
+      "alt": "L’Homme depuis cinq mille ans : gravure en noir et blanc et feuillet de protection.",
+      "variants": [
+        {
+          "src": "/assets/images/homme-depuis-cinq-mille-ans-1-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/assets/images/homme-depuis-cinq-mille-ans-1-320.webp",
+          "width": 320,
+          "height": 240
+        },
+        {
+          "src": "/assets/images/homme-depuis-cinq-mille-ans-1-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/homme-depuis-cinq-mille-ans-1-800.webp",
+          "width": 800,
+          "height": 600
+        }
+      ],
+      "caption": "Gravure en noir et blanc et feuillet de protection."
+    },
+    {
+      "alt": "L’Homme depuis cinq mille ans : mention de l’imprimeur parisien Simon Raçon et comp.",
+      "variants": [
+        {
+          "src": "/assets/images/homme-depuis-cinq-mille-ans-2-160.webp",
+          "width": 160,
+          "height": 91
+        },
+        {
+          "src": "/assets/images/homme-depuis-cinq-mille-ans-2-320.webp",
+          "width": 320,
+          "height": 182
+        },
+        {
+          "src": "/assets/images/homme-depuis-cinq-mille-ans-2-640.webp",
+          "width": 640,
+          "height": 363
+        },
+        {
+          "src": "/assets/images/homme-depuis-cinq-mille-ans-2-800.webp",
+          "width": 800,
+          "height": 454
+        }
+      ],
+      "caption": "Mention de l’imprimeur parisien Simon Raçon et comp."
+    }
+  ],
+  "104": [
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/contes-bleus/07-160.webp",
+          "width": 160,
+          "height": 226
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/contes-bleus/07-640.webp",
+          "width": 640,
+          "height": 904
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/contes-bleus/07-1200.webp",
+          "width": 1055,
+          "height": 1491
+        }
+      ],
+      "alt": "Contes bleus : dos à caissons et plat marbré, livre debout.",
+      "caption": "Dos à caissons et plat marbré, livre debout."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/contes-bleus/01-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/contes-bleus/01-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/contes-bleus/01-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Contes bleus : livre ouvert sur des pages illustrées et une introduction.",
+      "caption": "Livre ouvert sur des pages illustrées et une introduction."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/contes-bleus/02-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/contes-bleus/02-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/contes-bleus/02-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Contes bleus : ouverture illustrée d’un récit.",
+      "caption": "Ouverture illustrée d’un récit."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/contes-bleus/03-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/contes-bleus/03-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/contes-bleus/03-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Contes bleus : page de titre de Contes bleus.",
+      "caption": "Page de titre de Contes bleus."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/contes-bleus/04-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/contes-bleus/04-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/contes-bleus/04-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Contes bleus : reliure fermée à plat, coins et plats marbrés.",
+      "caption": "Reliure fermée à plat, coins et plats marbrés."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/contes-bleus/05-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/contes-bleus/05-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/contes-bleus/05-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Contes bleus : reliure fermée, dos et tranche vus de biais.",
+      "caption": "Reliure fermée, dos et tranche vus de biais."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/contes-bleus/06-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/contes-bleus/06-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/contes-bleus/06-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Contes bleus : livre debout, dos décoré et plat marbré.",
+      "caption": "Livre debout, dos décoré et plat marbré."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/contes-bleus/08-160.webp",
+          "width": 160,
+          "height": 226
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/contes-bleus/08-640.webp",
+          "width": 640,
+          "height": 904
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/contes-bleus/08-1200.webp",
+          "width": 1055,
+          "height": 1491
+        }
+      ],
+      "alt": "Contes bleus : livre debout montrant le dos et le plat.",
+      "caption": "Livre debout montrant le dos et le plat."
+    }
+  ],
+  "105": [
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/05-160.webp",
+          "width": 160,
+          "height": 240
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/05-640.webp",
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/05-1200.webp",
+          "width": 1024,
+          "height": 1536
+        }
+      ],
+      "alt": "Victor Hugo : reliure rouge et noire vue debout.",
+      "caption": "Reliure rouge et noire vue debout."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/01-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/01-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/01-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Victor Hugo : livre ouvert sur une page de texte.",
+      "caption": "Livre ouvert sur une page de texte."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/02-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/02-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/02-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Victor Hugo : plat rouge et papier marbré, livre fermé.",
+      "caption": "Plat rouge et papier marbré, livre fermé."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/03-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/03-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/03-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Victor Hugo : dos rouge et plat marbré, vue de biais.",
+      "caption": "Dos rouge et plat marbré, vue de biais."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/04-160.webp",
+          "width": 160,
+          "height": 240
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/04-640.webp",
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/victor-hugo-annees-enfance/04-1200.webp",
+          "width": 1024,
+          "height": 1536
+        }
+      ],
+      "alt": "Victor Hugo : livre debout montrant le dos et le plat.",
+      "caption": "Livre debout montrant le dos et le plat."
+    }
+  ],
+  "106": [
+    {
+      "alt": "Jacques Dumont, roman d’un petit paysan : reliure bordeaux à coins et plat marbré, livre fermé.",
+      "variants": [
+        {
+          "src": "/assets/images/jacques-dumont-1-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/assets/images/jacques-dumont-1-320.webp",
+          "width": 320,
+          "height": 213
+        },
+        {
+          "src": "/assets/images/jacques-dumont-1-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/assets/images/jacques-dumont-1-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "caption": "Reliure bordeaux à coins et plat marbré, livre fermé."
+    },
+    {
+      "alt": "Jacques Dumont, roman d’un petit paysan : détail du dos portant M. Charot et Jacques Dumont.",
+      "variants": [
+        {
+          "src": "/assets/images/jacques-dumont-2-160.webp",
+          "width": 160,
+          "height": 240
+        },
+        {
+          "src": "/assets/images/jacques-dumont-2-320.webp",
+          "width": 320,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/jacques-dumont-2-640.webp",
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "/assets/images/jacques-dumont-2-1024.webp",
+          "width": 1024,
+          "height": 1536
+        }
+      ],
+      "caption": "Détail du dos portant M. Charot et Jacques Dumont."
+    },
+    {
+      "alt": "Jacques Dumont, roman d’un petit paysan : double page avec texte et gravure en noir et blanc.",
+      "variants": [
+        {
+          "src": "/assets/images/jacques-dumont-3-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/assets/images/jacques-dumont-3-320.webp",
+          "width": 320,
+          "height": 240
+        },
+        {
+          "src": "/assets/images/jacques-dumont-3-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/jacques-dumont-3-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "caption": "Double page avec texte et gravure en noir et blanc."
+    },
+    {
+      "alt": "Jacques Dumont, roman d’un petit paysan : mention de l’adoption de l’ouvrage pour les bibliothèques scolaires.",
+      "variants": [
+        {
+          "src": "/assets/images/jacques-dumont-4-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/assets/images/jacques-dumont-4-320.webp",
+          "width": 320,
+          "height": 240
+        },
+        {
+          "src": "/assets/images/jacques-dumont-4-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/jacques-dumont-4-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "caption": "Mention de l’adoption de l’ouvrage pour les bibliothèques scolaires."
+    },
+    {
+      "alt": "Jacques Dumont, roman d’un petit paysan : page de titre : Médéric Charot, Jacques Dumont, Librairie Gedalge.",
+      "variants": [
+        {
+          "src": "/assets/images/jacques-dumont-5-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/assets/images/jacques-dumont-5-320.webp",
+          "width": 320,
+          "height": 240
+        },
+        {
+          "src": "/assets/images/jacques-dumont-5-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/assets/images/jacques-dumont-5-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "caption": "Page de titre : Médéric Charot, Jacques Dumont, Librairie Gedalge."
+    },
+    {
+      "alt": "Jacques Dumont, roman d’un petit paysan : détail du dos décoré et du plat marbré.",
+      "variants": [
+        {
+          "src": "/assets/images/jacques-dumont-6-160.webp",
+          "width": 160,
+          "height": 213
+        },
+        {
+          "src": "/assets/images/jacques-dumont-6-320.webp",
+          "width": 320,
+          "height": 427
+        },
+        {
+          "src": "/assets/images/jacques-dumont-6-640.webp",
+          "width": 640,
+          "height": 853
+        },
+        {
+          "src": "/assets/images/jacques-dumont-6-1200.webp",
+          "width": 1200,
+          "height": 1600
+        }
+      ],
+      "caption": "Détail du dos décoré et du plat marbré."
+    }
+  ],
+  "107": [
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/08-160.webp",
+          "width": 160,
+          "height": 213
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/08-640.webp",
+          "width": 640,
+          "height": 853
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/08-1200.webp",
+          "width": 1086,
+          "height": 1448
+        }
+      ],
+      "alt": "Le Capitaine Fracasse : reliure bordeaux à coins présentée debout.",
+      "caption": "Reliure bordeaux à coins présentée debout."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/01-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/01-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/01-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Le Capitaine Fracasse : double page avec texte et illustration.",
+      "caption": "Double page avec texte et illustration."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/02-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/02-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/02-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Le Capitaine Fracasse : page d’introduction du Capitaine Fracasse.",
+      "caption": "Page d’introduction du Capitaine Fracasse."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/03-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/03-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/03-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Le Capitaine Fracasse : page de titre avec les noms de Gautier et Daniel-Girard.",
+      "caption": "Page de titre avec les noms de Gautier et Daniel-Girard."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/04-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/04-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/04-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Le Capitaine Fracasse : reliure bordeaux à coins et papier marbré, livre fermé.",
+      "caption": "Reliure bordeaux à coins et papier marbré, livre fermé."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/05-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/05-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/05-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Le Capitaine Fracasse : détail du dos portant le titre Le Capitaine Fracasse.",
+      "caption": "Détail du dos portant le titre Le Capitaine Fracasse."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/06-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/06-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/06-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Le Capitaine Fracasse : dos et plat vus de biais, livre fermé.",
+      "caption": "Dos et plat vus de biais, livre fermé."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/07-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/07-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/capitaine-fracasse/07-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Le Capitaine Fracasse : livre debout montrant dos et plat.",
+      "caption": "Livre debout montrant dos et plat."
+    }
+  ],
+  "108": [
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/01-160.webp",
+          "width": 160,
+          "height": 240
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/01-640.webp",
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/01-1200.webp",
+          "width": 1024,
+          "height": 1536
+        }
+      ],
+      "alt": "Berthe ou Le Devoir accompli : livre debout, cartonnage rouge à décor floral et architectural.",
+      "caption": "Livre debout, cartonnage rouge à décor floral et architectural."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/02-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/02-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/02-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Berthe ou Le Devoir accompli : double page de texte de Berthe.",
+      "caption": "Double page de texte de Berthe."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/03-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/03-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/03-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Berthe ou Le Devoir accompli : frontispice et page de titre, Mégard, 1893.",
+      "caption": "Frontispice et page de titre, Mégard, 1893."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/04-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/04-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/04-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Berthe ou Le Devoir accompli : page de collection Bibliothèque morale de la jeunesse.",
+      "caption": "Page de collection Bibliothèque morale de la jeunesse."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/05-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/05-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/05-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Berthe ou Le Devoir accompli : livre fermé, dos et plat rouge décoré.",
+      "caption": "Livre fermé, dos et plat rouge décoré."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/06-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/06-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/06-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Berthe ou Le Devoir accompli : plat du cartonnage et tranche vus de biais.",
+      "caption": "Plat du cartonnage et tranche vus de biais."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/07-160.webp",
+          "width": 160,
+          "height": 240
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/07-640.webp",
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/berthe-devoir-accompli/07-1200.webp",
+          "width": 1024,
+          "height": 1536
+        }
+      ],
+      "alt": "Berthe ou Le Devoir accompli : livre debout montrant le dos et le décor du plat.",
+      "caption": "Livre debout montrant le dos et le décor du plat."
+    }
+  ],
+  "109": [
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/05-160.webp",
+          "width": 160,
+          "height": 240
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/05-640.webp",
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/05-1200.webp",
+          "width": 1024,
+          "height": 1536
+        }
+      ],
+      "alt": "Ceux du blocus : dos à caissons dorés et plat marbré, vue debout.",
+      "caption": "Dos à caissons dorés et plat marbré, vue debout."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/01-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/01-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/01-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Ceux du blocus : livre ouvert sur la justification et le début de la première partie.",
+      "caption": "Livre ouvert sur la justification et le début de la première partie."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/02-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/02-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/02-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Ceux du blocus : double page de texte.",
+      "caption": "Double page de texte."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/03-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/03-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/03-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Ceux du blocus : reliure sombre à plats marbrés et dos à nerfs, livre fermé.",
+      "caption": "Reliure sombre à plats marbrés et dos à nerfs, livre fermé."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/04-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/04-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/ceux-du-blocus/04-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Ceux du blocus : livre debout montrant son dos et son plat marbré.",
+      "caption": "Livre debout montrant son dos et son plat marbré."
+    }
+  ],
+  "110": [
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/07-160.webp",
+          "width": 160,
+          "height": 213
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/07-640.webp",
+          "width": 640,
+          "height": 853
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/07-1200.webp",
+          "width": 1086,
+          "height": 1448
+        }
+      ],
+      "alt": "Harold, héros d’aventures : cartonnage rouge présenté debout.",
+      "caption": "Cartonnage rouge présenté debout."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/01-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/01-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/01-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Harold, héros d’aventures : double page avec texte et illustration en noir et blanc.",
+      "caption": "Double page avec texte et illustration en noir et blanc."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/02-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/02-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/02-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Harold, héros d’aventures : début du premier chapitre de Harold, héros d’aventures.",
+      "caption": "Début du premier chapitre de Harold, héros d’aventures."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/03-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/03-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/03-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Harold, héros d’aventures : étiquette de distribution des prix.",
+      "caption": "Étiquette de distribution des prix."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/04-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/04-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/04-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Harold, héros d’aventures : cartonnage rouge à décor floral, livre fermé.",
+      "caption": "Cartonnage rouge à décor floral, livre fermé."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/05-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/05-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/05-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Harold, héros d’aventures : dos et plat décoré vus de biais.",
+      "caption": "Dos et plat décoré vus de biais."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/06-160.webp",
+          "width": 160,
+          "height": 213
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/06-640.webp",
+          "width": 640,
+          "height": 853
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/harold-heros-aventures/06-1200.webp",
+          "width": 1086,
+          "height": 1448
+        }
+      ],
+      "alt": "Harold, héros d’aventures : livre debout montrant son dos et son plat fleuri.",
+      "caption": "Livre debout montrant son dos et son plat fleuri."
+    }
+  ],
+  "111": [
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/07-160.webp",
+          "width": 160,
+          "height": 213
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/07-640.webp",
+          "width": 640,
+          "height": 853
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/07-1200.webp",
+          "width": 1086,
+          "height": 1448
+        }
+      ],
+      "alt": "Histoire d’un enfant : cartonnage rouge décoré présenté debout.",
+      "caption": "Cartonnage rouge décoré présenté debout."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/01-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/01-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/01-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Histoire d’un enfant : double page avec texte et illustration.",
+      "caption": "Double page avec texte et illustration."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/02-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/02-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/02-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Histoire d’un enfant : page de titre Histoire d’un enfant, Edgar Quinet, Librairie Hachette.",
+      "caption": "Page de titre Histoire d’un enfant, Edgar Quinet, Librairie Hachette."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/03-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/03-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/03-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Histoire d’un enfant : page portant une inscription manuscrite de prix scolaire.",
+      "caption": "Page portant une inscription manuscrite de prix scolaire."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/04-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/04-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/04-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Histoire d’un enfant : cartonnage rouge à fleurs dorées, livre fermé.",
+      "caption": "Cartonnage rouge à fleurs dorées, livre fermé."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/05-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/05-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/05-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Histoire d’un enfant : dos et plat décoré vus de biais.",
+      "caption": "Dos et plat décoré vus de biais."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/06-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/06-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/histoire-enfant-quinet/06-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Histoire d’un enfant : livre debout montrant le dos et le plat.",
+      "caption": "Livre debout montrant le dos et le plat."
+    }
+  ],
+  "112": [
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/destinee-silvere/07-160.webp",
+          "width": 160,
+          "height": 213
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/destinee-silvere/07-640.webp",
+          "width": 640,
+          "height": 853
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/destinee-silvere/07-1200.webp",
+          "width": 1086,
+          "height": 1448
+        }
+      ],
+      "alt": "La Destinée de Silvère : cartonnage rouge fleuri présenté debout.",
+      "caption": "Cartonnage rouge fleuri présenté debout."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/destinee-silvere/01-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/destinee-silvere/01-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/destinee-silvere/01-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "La Destinée de Silvère : double page avec texte et illustrations.",
+      "caption": "Double page avec texte et illustrations."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/destinee-silvere/02-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/destinee-silvere/02-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/destinee-silvere/02-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "La Destinée de Silvère : page de titre La Destinée de Silvère, Pierre Ficy, Librairie Hachette.",
+      "caption": "Page de titre La Destinée de Silvère, Pierre Ficy, Librairie Hachette."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/destinee-silvere/03-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/destinee-silvere/03-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/destinee-silvere/03-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "La Destinée de Silvère : étiquette de distribution des prix.",
+      "caption": "Étiquette de distribution des prix."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/destinee-silvere/04-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/destinee-silvere/04-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/destinee-silvere/04-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "La Destinée de Silvère : cartonnage rouge à encadrement floral, livre fermé.",
+      "caption": "Cartonnage rouge à encadrement floral, livre fermé."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/destinee-silvere/05-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/destinee-silvere/05-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/destinee-silvere/05-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "La Destinée de Silvère : dos et plat décoré vus de biais.",
+      "caption": "Dos et plat décoré vus de biais."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/destinee-silvere/06-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/destinee-silvere/06-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/destinee-silvere/06-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "La Destinée de Silvère : livre debout montrant le dos et le décor du plat.",
+      "caption": "Livre debout montrant le dos et le décor du plat."
+    }
+  ],
+  "113": [
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/09-160.webp",
+          "width": 160,
+          "height": 240
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/09-640.webp",
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/09-1200.webp",
+          "width": 1024,
+          "height": 1536
+        }
+      ],
+      "alt": "Le Merveilleux Voyage de Nils Holgersson : reliure bordeaux et plat marbré présentés debout.",
+      "caption": "Reliure bordeaux et plat marbré présentés debout."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/01-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/01-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/01-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Le Merveilleux Voyage de Nils Holgersson : double page de texte avec illustration.",
+      "caption": "Double page de texte avec illustration."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/02-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/02-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/02-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Le Merveilleux Voyage de Nils Holgersson : page de titre Nils Holgersson, Delagrave, 1949.",
+      "caption": "Page de titre Nils Holgersson, Delagrave, 1949."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/03-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/03-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/03-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Le Merveilleux Voyage de Nils Holgersson : page de justification mentionnant des grands papiers.",
+      "caption": "Page de justification mentionnant des grands papiers."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/04-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/04-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/04-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Le Merveilleux Voyage de Nils Holgersson : faux-titre du Merveilleux Voyage de Nils Holgersson.",
+      "caption": "Faux-titre du Merveilleux Voyage de Nils Holgersson."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/05-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/05-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/05-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Le Merveilleux Voyage de Nils Holgersson : feuillet de garde non imprimé.",
+      "caption": "Feuillet de garde non imprimé."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/06-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/06-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/06-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Le Merveilleux Voyage de Nils Holgersson : reliure bordeaux et papier marbré, livre fermé.",
+      "caption": "Reliure bordeaux et papier marbré, livre fermé."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/07-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/07-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/07-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Le Merveilleux Voyage de Nils Holgersson : dos et plat marbré, livre debout sur le bois.",
+      "caption": "Dos et plat marbré, livre debout sur le bois."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/08-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/08-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nils-holgersson/08-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Le Merveilleux Voyage de Nils Holgersson : livre debout sur un tissu, dos et plat marbré.",
+      "caption": "Livre debout sur un tissu, dos et plat marbré."
+    }
+  ],
+  "114": [
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/rouge-et-noir/05-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/rouge-et-noir/05-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/rouge-et-noir/05-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Le Rouge et le Noir : reliure rouge orangé présentée debout.",
+      "caption": "Reliure rouge orangé présentée debout."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/rouge-et-noir/01-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/rouge-et-noir/01-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/rouge-et-noir/01-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Le Rouge et le Noir : double page de texte du Rouge et le Noir.",
+      "caption": "Double page de texte du Rouge et le Noir."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/rouge-et-noir/02-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/rouge-et-noir/02-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/rouge-et-noir/02-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Le Rouge et le Noir : reproduction d’un ancien titre et début de l’introduction.",
+      "caption": "Reproduction d’un ancien titre et début de l’introduction."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/rouge-et-noir/03-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/rouge-et-noir/03-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/rouge-et-noir/03-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Le Rouge et le Noir : reliure rouge orangé portant une vignette, livre fermé.",
+      "caption": "Reliure rouge orangé portant une vignette, livre fermé."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/rouge-et-noir/04-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/rouge-et-noir/04-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/rouge-et-noir/04-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Le Rouge et le Noir : livre debout montrant le dos et la vignette du plat.",
+      "caption": "Livre debout montrant le dos et la vignette du plat."
+    }
+  ],
+  "115": [
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/05-160.webp",
+          "width": 160,
+          "height": 240
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/05-640.webp",
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/05-1200.webp",
+          "width": 1024,
+          "height": 1536
+        }
+      ],
+      "alt": "Les Nuits secrètes de Paris : reliure noire décorée présentée debout.",
+      "caption": "Reliure noire décorée présentée debout."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/01-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/01-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/01-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Les Nuits secrètes de Paris : livre ouvert sur du texte et une photographie encadrée de rouge.",
+      "caption": "Livre ouvert sur du texte et une photographie encadrée de rouge."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/02-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/02-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/02-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Les Nuits secrètes de Paris : page de texte et garde rouge.",
+      "caption": "Page de texte et garde rouge."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/03-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/03-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/03-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Les Nuits secrètes de Paris : reliure noire à décor rouge et doré, livre fermé.",
+      "caption": "Reliure noire à décor rouge et doré, livre fermé."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/04-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/04-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/nuits-secretes-paris/04-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Les Nuits secrètes de Paris : livre debout montrant le dos et le titre du plat.",
+      "caption": "Livre debout montrant le dos et le titre du plat."
+    }
+  ],
+  "116": [
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/09-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/09-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/09-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "François Coppée : les deux reliures présentées debout sur un tissu.",
+      "caption": "Les deux reliures présentées debout sur un tissu."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/01-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/01-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/01-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "François Coppée : double page illustrée du volume de prose.",
+      "caption": "Double page illustrée du volume de prose."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/02-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/02-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/02-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "François Coppée : page illustrée du récit Une vieille pendant le siège.",
+      "caption": "Page illustrée du récit Une vieille pendant le siège."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/03-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/03-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/03-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "François Coppée : page de titre du volume de prose, François Coppée, Alphonse Lemerre.",
+      "caption": "Page de titre du volume de prose, François Coppée, Alphonse Lemerre."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/04-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/04-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/04-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "François Coppée : faux-titre du volume de prose, œuvres de 1873 à 1890.",
+      "caption": "Faux-titre du volume de prose, œuvres de 1873 à 1890."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/05-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/05-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/05-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "François Coppée : gardes de papier marbré.",
+      "caption": "Gardes de papier marbré."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/06-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/06-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/06-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "François Coppée : les deux volumes fermés, dos à nerfs et plats marbrés.",
+      "caption": "Les deux volumes fermés, dos à nerfs et plats marbrés."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/07-160.webp",
+          "width": 160,
+          "height": 213
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/07-640.webp",
+          "width": 640,
+          "height": 853
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/07-1200.webp",
+          "width": 1086,
+          "height": 1448
+        }
+      ],
+      "alt": "François Coppée : les deux volumes de Théâtre et Prose présentés debout.",
+      "caption": "Les deux volumes de Théâtre et Prose présentés debout."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/08-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/08-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/coppee-theatre-prose/08-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "François Coppée : détail des titres et tomaisons sur les deux dos.",
+      "caption": "Détail des titres et tomaisons sur les deux dos."
+    }
+  ],
+  "117": [
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/petites-nouvelles/06-160.webp",
+          "width": 160,
+          "height": 240
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/petites-nouvelles/06-640.webp",
+          "width": 640,
+          "height": 960
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/petites-nouvelles/06-1200.webp",
+          "width": 1024,
+          "height": 1536
+        }
+      ],
+      "alt": "Petites Nouvelles : cartonnage rouge aux marguerites présenté debout.",
+      "caption": "Cartonnage rouge aux marguerites présenté debout."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/petites-nouvelles/01-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/petites-nouvelles/01-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/petites-nouvelles/01-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Petites Nouvelles : double page de texte de Petites Nouvelles.",
+      "caption": "Double page de texte de Petites Nouvelles."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/petites-nouvelles/02-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/petites-nouvelles/02-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/petites-nouvelles/02-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Petites Nouvelles : étiquette de distribution des prix et gardes.",
+      "caption": "Étiquette de distribution des prix et gardes."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/petites-nouvelles/03-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/petites-nouvelles/03-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/petites-nouvelles/03-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Petites Nouvelles : cartonnage rouge aux marguerites dorées, livre fermé.",
+      "caption": "Cartonnage rouge aux marguerites dorées, livre fermé."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/petites-nouvelles/04-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/petites-nouvelles/04-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/petites-nouvelles/04-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Petites Nouvelles : détail du décor floral doré du plat.",
+      "caption": "Détail du décor floral doré du plat."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/petites-nouvelles/05-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/petites-nouvelles/05-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/petites-nouvelles/05-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Petites Nouvelles : livre debout, dos et décor du cartonnage.",
+      "caption": "Livre debout, dos et décor du cartonnage."
+    }
+  ],
+  "118": [
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/quentin-durward/01-160.webp",
+          "width": 160,
+          "height": 130
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/quentin-durward/01-640.webp",
+          "width": 640,
+          "height": 520
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/quentin-durward/01-1200.webp",
+          "width": 1200,
+          "height": 976
+        }
+      ],
+      "alt": "Quentin Durward : cartonnage rouge aux armes de la Ville de Paris, mention Prix municipal.",
+      "caption": "Cartonnage rouge aux armes de la Ville de Paris, mention Prix municipal."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/quentin-durward/02-160.webp",
+          "width": 160,
+          "height": 111
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/quentin-durward/02-640.webp",
+          "width": 640,
+          "height": 444
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/quentin-durward/02-1200.webp",
+          "width": 1200,
+          "height": 833
+        }
+      ],
+      "alt": "Quentin Durward : dos et plat rouge vus de biais, livre fermé.",
+      "caption": "Dos et plat rouge vus de biais, livre fermé."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/quentin-durward/03-160.webp",
+          "width": 160,
+          "height": 183
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/quentin-durward/03-640.webp",
+          "width": 640,
+          "height": 734
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/quentin-durward/03-1200.webp",
+          "width": 1128,
+          "height": 1293
+        }
+      ],
+      "alt": "Quentin Durward : détail du dos portant Walter Scott et Quentin Durward.",
+      "caption": "Détail du dos portant Walter Scott et Quentin Durward."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/quentin-durward/04-160.webp",
+          "width": 160,
+          "height": 147
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/quentin-durward/04-640.webp",
+          "width": 640,
+          "height": 587
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/quentin-durward/04-1200.webp",
+          "width": 1200,
+          "height": 1101
+        }
+      ],
+      "alt": "Quentin Durward : pages de texte avec ornements illustrés.",
+      "caption": "Pages de texte avec ornements illustrés."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/quentin-durward/05-160.webp",
+          "width": 160,
+          "height": 232
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/quentin-durward/05-640.webp",
+          "width": 640,
+          "height": 926
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/quentin-durward/05-1200.webp",
+          "width": 1200,
+          "height": 1737
+        }
+      ],
+      "alt": "Quentin Durward : page de titre Quentin Durward, Armand Colin, 1934.",
+      "caption": "Page de titre Quentin Durward, Armand Colin, 1934."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/quentin-durward/06-160.webp",
+          "width": 160,
+          "height": 196
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/quentin-durward/06-640.webp",
+          "width": 640,
+          "height": 784
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/quentin-durward/06-1200.webp",
+          "width": 1200,
+          "height": 1469
+        }
+      ],
+      "alt": "Quentin Durward : étiquette scolaire de distribution des prix, datée de 1937.",
+      "caption": "Étiquette scolaire de distribution des prix, datée de 1937."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/quentin-durward/07-160.webp",
+          "width": 160,
+          "height": 107
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/quentin-durward/07-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/quentin-durward/07-1200.webp",
+          "width": 1200,
+          "height": 800
+        }
+      ],
+      "alt": "Quentin Durward : montage des vues du cartonnage, du texte, du titre et de l’étiquette.",
+      "caption": "Montage des vues du cartonnage, du texte, du titre et de l’étiquette."
+    }
+  ],
+  "119": [
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/robinson-crusoe/05-160.webp",
+          "width": 160,
+          "height": 213
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/robinson-crusoe/05-640.webp",
+          "width": 640,
+          "height": 853
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/robinson-crusoe/05-1200.webp",
+          "width": 1086,
+          "height": 1448
+        }
+      ],
+      "alt": "Robinson Crusoé : reliure claire décorée présentée debout.",
+      "caption": "Reliure claire décorée présentée debout."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/robinson-crusoe/01-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/robinson-crusoe/01-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/robinson-crusoe/01-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Robinson Crusoé : double page avec texte et illustration en couleurs.",
+      "caption": "Double page avec texte et illustration en couleurs."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/robinson-crusoe/02-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/robinson-crusoe/02-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/robinson-crusoe/02-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Robinson Crusoé : frontispice en couleurs et page de titre de Robinson Crusoé.",
+      "caption": "Frontispice en couleurs et page de titre de Robinson Crusoé."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/robinson-crusoe/03-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/robinson-crusoe/03-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/robinson-crusoe/03-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Robinson Crusoé : reliure claire à encadrement doré, livre fermé.",
+      "caption": "Reliure claire à encadrement doré, livre fermé."
+    },
+    {
+      "variants": [
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/robinson-crusoe/04-160.webp",
+          "width": 160,
+          "height": 120
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/robinson-crusoe/04-640.webp",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "src": "/PRODUITS/Catalogue-2026-11/robinson-crusoe/04-1200.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "alt": "Robinson Crusoé : livre debout montrant son dos et le plat décoré.",
+      "caption": "Livre debout montrant son dos et le plat décoré."
+    }
+  ]
+}

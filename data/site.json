@@ -1,0 +1,26 @@
+{
+  "name": "L’Atelier des Mémoires",
+  "url": "https://latelierdesmemoires.netlify.app",
+  "seller": {
+    "status": null,
+    "publicName": null,
+    "contactEmail": null,
+    "publicAddress": null,
+    "registration": null,
+    "publicationDirector": null,
+    "profileUrl": "https://www.leboncoin.fr/profile/4f60d5f4-9c2d-4430-b46f-9f022a51618f",
+    "legalText": null,
+    "termsText": null,
+    "city": "Paris"
+  },
+  "reviews": [],
+  "updated": "2026-11-02",
+  "verification": {
+    "bing": "8DF9708AFE373044682C12CDA7917695"
+  },
+  "internationalShipping": "not_configured",
+  "analytics": {
+    "provider": null,
+    "enabled": false
+  }
+}

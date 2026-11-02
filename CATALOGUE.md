@@ -1,4 +1,10 @@
-# Catalogue du 2 novembre 2026
+# Catalogue — source actuelle
+
+Le catalogue est désormais généré à partir de `data/books.json` et `data/media.json`. Pour modifier un titre, une description, un prix, un lien ou un statut, utiliser ces sources puis reconstruire le site. Les pages de `dist/` ne sont pas éditées à la main. Voir `README.md` et `SUIVI-SEO.md` pour les procédures.
+
+Les 15 prix totalisent toujours 322 €, et les 100 photos des nouveautés sont conservées. Les quatre anciennes fiches ont reçu des descriptions prudentes ; Notre Belle Patrie porte 1911 selon sa page de titre photographiée. La disponibilité reste à confirmer sur Leboncoin.
+
+## Historique de l’intégration du 2 novembre 2026
 
 La présentation actuelle du site est conservée. Douze fiches sont ajoutées et trois sont actualisées (ADM-104, ADM-105, ADM-107), soit 19 fiches au total. Les quatre autres fiches et leurs liens sont conservés.
 
@@ -28,7 +34,7 @@ Total des 15 prix : **322 €**, pour 16 volumes physiques et 100 images finales
 
 Les 15 livres sont désormais publiés sur le compte L’Atelier des Mémoires : quatre nouvelles annonces et onze annonces existantes actualisées. Leurs liens et prix ont été vérifiés sur le compte le 2 novembre 2026. Les 15 champs `lb_url` sont renseignés et les anciennes mentions « Annonce Leboncoin à venir » sont retirées des descriptions. Les liens sont accessibles directement dans les fiches et depuis la sélection. Aucune disponibilité en stock n’est déduite de ces liens.
 
-Pour remplacer un lien, modifier le champ `lb_url` de l’objet concerné dans le tableau `books` de `index.html`, avec l’URL HTTPS exacte de Leboncoin. Vérifier son titre, son prix et sa disponibilité sur l’annonce réelle. Le site ne synchronise pas automatiquement les ventes ou les changements de prix de Leboncoin.
+Pour remplacer un lien, modifier le champ `lb_url` de l’objet concerné dans `data/books.json`, avec l’URL HTTPS exacte de Leboncoin. Vérifier son titre, son prix et sa disponibilité sur l’annonce réelle. Le site ne synchronise pas automatiquement les ventes ou les changements de prix de Leboncoin.
 
 | Référence | Annonce Leboncoin |
 |---|---|
