@@ -1,0 +1,70 @@
+{
+  "locale": "en",
+  "sourceLanguage": "fr",
+  "books": [
+    {
+      "id": 108,
+      "title": "Berthe ou Le Devoir accompli — Pierre Dartois — Mégard, 1893",
+      "description": "A work of moral literature for young readers, in a red decorated board binding with flowers, birds and black-and-gold architectural motifs.\n\nLanguage of this copy: French. This English page describes the French-language book offered.\n\nAuthor: Pierre Dartois\nEdition: Rouen, Mégard et Cie, 1893. Bibliothèque morale de la jeunesse series; engravings in the text. The year is legible on the photographed title page.\n\nAppearance and condition: Visible wear to the corners and the foot of the binding.\n\nThe photographs show the copy offered. Completeness and the soundness of the gatherings cannot be certified from the photographs alone; they remain to be checked on the physical book.\n\nAsking price: EUR 12, excluding delivery.",
+      "metaDescription": "Berthe ou Le Devoir accompli by Pierre Dartois, Mégard, 1893. French-language copy, decorated red binding, visible wear. EUR 12 excluding delivery.",
+      "category": "Novels & stories"
+    },
+    {
+      "id": 113,
+      "title": "Le Merveilleux Voyage de Nils Holgersson — Selma Lagerlöf — Delagrave, 1949",
+      "description": "Nils's journey through Sweden, in T. Hammar's French translation, illustrated by Roger Reboussin. Burgundy half binding, ochre marbled boards and gilt title.\n\nLanguage of this copy: French. This English page describes the French-language book offered.\n\nAuthor: Selma Lagerlöf\nEdition: Paris, Librairie Delagrave, 15 rue Soufflot, 1949. The year is legible on the title page. The printing statement mentions several special-paper issues, but no individual copy number is visible for this volume: this copy is not claimed to be one of those special-paper issues.\n\nAppearance and condition: Yellowed leaves and edges; the condition of the binding is shown in the gallery.\n\nThe photographs show the copy offered. Completeness and the soundness of the gatherings cannot be certified from the photographs alone; they remain to be checked on the physical book.\n\nAsking price: EUR 35, excluding delivery.",
+      "metaDescription": "Le Merveilleux Voyage de Nils Holgersson, Delagrave, 1949. French translation, Roger Reboussin illustrations. EUR 35 excluding delivery.",
+      "category": "Novels & stories"
+    },
+    {
+      "id": 118,
+      "title": "Quentin Durward — Walter Scott — Armand Colin, 1934 — Prix municipal",
+      "description": "Walter Scott's historical novel in a red decorated board binding bearing the arms of the City of Paris and the gilt words Prix municipal.\n\nLanguage of this copy: French. This English page describes the French-language book offered.\n\nAuthor: Walter Scott\nEdition: Paris, Librairie Armand Colin, 1934. Adapted by M. Guéchot from Defauconpret's translation; illustrated by Albert Robida. The edition number remains to be confirmed. The school-prize label is dated 1937: this award date is distinct from the publication year.\n\nAppearance and condition: Yellowed edges; the condition of the binding, spine and label is shown in the gallery.\n\nThe photographs show the copy offered. Completeness and the soundness of the gatherings cannot be certified from the photographs alone; they remain to be checked on the physical book.\n\nAsking price: EUR 20, excluding delivery.",
+      "metaDescription": "Quentin Durward by Walter Scott, Armand Colin, 1934. French adaptation illustrated by Albert Robida; school-prize copy. EUR 20 excluding delivery.",
+      "category": "Novels & stories"
+    }
+  ],
+  "categoryLabels": {
+    "Romans & contes": "Novels & stories",
+    "Histoire": "History",
+    "Biographies": "Biography",
+    "Poésie & théâtre": "Poetry & theatre",
+    "Tous": "All books"
+  },
+  "labels": {
+    "siteName": "L’Atelier des Mémoires",
+    "home": "Home",
+    "catalogue": "Books",
+    "about": "About",
+    "contact": "Contact",
+    "shipping": "Collection & delivery",
+    "condition": "Condition",
+    "edition": "Edition",
+    "language": "Language of this copy",
+    "frenchBook": "French",
+    "englishDescription": "English description of a French-language book",
+    "viewListing": "View the Leboncoin listing",
+    "askSeller": "Ask the seller on Leboncoin",
+    "viewFrenchVersion": "Lire la fiche en français",
+    "priceExcludingDelivery": "Price excluding delivery",
+    "photos": "Photographs of the copy offered",
+    "backToCatalogue": "Back to the book selection",
+    "availableTranslations": "Available languages",
+    "relatedBooks": "Other books",
+    "unknownYear": "Publication year not confirmed"
+  },
+  "contact": {
+    "heading": "Ask about this copy",
+    "description": "For questions about the book, its condition or collection and delivery, use the relevant Leboncoin listing to contact the seller.",
+    "listingCta": "Ask the seller on Leboncoin",
+    "profileCta": "View the seller’s Leboncoin profile",
+    "profileUrl": "https://www.leboncoin.fr/profile/4f60d5f4-9c2d-4430-b46f-9f022a51618f"
+  },
+  "shipping": {
+    "heading": "Collection & delivery",
+    "description": "Purchases are completed through Leboncoin. Its integrated delivery services are defined for mainland France. International delivery has not been confirmed for this shop.",
+    "internationalRequest": "For a request to deliver outside mainland France, ask the seller through the relevant Leboncoin listing about your destination, possible arrangements and costs before proceeding.",
+    "priceNotice": "Book prices are stated in EUR and exclude delivery.",
+    "collectionNotice": "Collection and delivery arrangements must be confirmed with the seller on Leboncoin."
+  }
+}
