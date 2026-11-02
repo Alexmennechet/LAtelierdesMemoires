@@ -240,6 +240,7 @@ function layout({
           name="google-site-verification"
           content="7ZdHeXYTZ7DiZU_PRpscocvn8qMrSu4fiRd5KLbLF90"
         />
+        ${site.verification?.bing ? `<meta name="msvalidate.01" content="${e(site.verification.bing)}">` : ""}
         <link
           rel="icon"
           type="image/png"
