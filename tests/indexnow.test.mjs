@@ -30,7 +30,10 @@ function engine(status = 200, liveHtml = html) {
   const request = async (url, options) => {
     calls.push({ url, options });
     if (options.method === "POST")
-      return new Response(null, { status, headers: { "retry-after": "3600" } });
+      return new Response(null, {
+        status,
+        headers: status === 429 ? { "retry-after": "3600" } : {},
+      });
     if (url.endsWith(`${key}.txt`)) return new Response(key);
     return new Response(liveHtml, {
       headers: { "Content-Type": "text/html; charset=utf-8" },
@@ -84,6 +87,42 @@ test("IndexNow refuses a build not yet live before any POST", async (t) => {
   );
   assert.equal(
     api.calls.filter((call) => call.options.method === "POST").length,
+    0,
+  );
+});
+test("IndexNow permits the Netlify hosting notice but rejects different visible content", async (t) => {
+  const base = await fixture(t);
+  const notice =
+    "<!-- This site is hosted on Netlify. Hosting information. -->\n";
+  const hosted = html.replace("<head>", "<head>" + notice);
+  const accepted = engine(200, hosted);
+  assert.equal(
+    (
+      await notify({
+        base,
+        submit: true,
+        paths: ["/guides/nouveau/"],
+        request: accepted.request,
+      })
+    ).status,
+    200,
+  );
+  await writeFile(
+    join(base, "dist/guides/nouveau/index.html"),
+    html.replace("Nouveau guide", "Guide différent"),
+  );
+  const different = engine(200, hosted);
+  await assert.rejects(
+    notify({
+      base,
+      submit: true,
+      paths: ["/guides/nouveau/"],
+      request: different.request,
+    }),
+    /Production differs/,
+  );
+  assert.equal(
+    different.calls.filter((call) => call.options.method === "POST").length,
     0,
   );
 });
