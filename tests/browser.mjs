@@ -438,6 +438,45 @@ try {
   assert.deepEqual(await page.evaluate(() => window.auditInteractions), [
     { action: "outbound_listing", language: "fr", bookId: 104 },
   ]);
+  // A restored selection must use today's contact route, not the inactive ad.
+  const carnet = books.find((book) => book.id === 101);
+  await page.goto(base + `/livres/${carnet.slug}/`, {
+    waitUntil: "networkidle",
+  });
+  assert.equal(await page.locator(`a[href="${carnet.lb_url}"]`).count(), 0);
+  assert.equal(
+    await page.locator('[data-contact="101"]').getAttribute("href"),
+    carnet.inquiry_url,
+  );
+  await page.evaluate(() => {
+    window.auditInteractions = [];
+    window.addEventListener("atelier:interaction", (event) =>
+      window.auditInteractions.push(event.detail),
+    );
+    document.addEventListener("click", (event) => {
+      if (event.target.closest("a[data-contact]")) event.preventDefault();
+    });
+  });
+  await page.locator('[data-contact="101"]').click();
+  assert.deepEqual(await page.evaluate(() => window.auditInteractions), [
+    { action: "outbound_contact", language: "fr", bookId: 101 },
+  ]);
+  await page.evaluate(
+    (book) =>
+      localStorage.setItem(
+        "atelier_cart",
+        JSON.stringify([{ ...book, availability: "unknown" }]),
+      ),
+    carnet,
+  );
+  await page.goto(base + "/selection/", { waitUntil: "networkidle" });
+  assert.equal(
+    await page
+      .locator('[data-full-selection] a[data-contact="101"]')
+      .getAttribute("href"),
+    carnet.inquiry_url,
+  );
+  assert.equal(await page.locator(`a[href="${carnet.lb_url}"]`).count(), 0);
   const response = await page.goto(base + "/does-not-exist/");
   assert.equal(response.status(), 404);
   assert.ok(

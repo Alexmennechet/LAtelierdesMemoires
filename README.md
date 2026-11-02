@@ -36,6 +36,8 @@ Modifier les sources et reconstruire ; ne pas éditer les pages générées. `di
 
 ## Disponibilité et vente
 
+Une annonce désactivée ne prouve pas une vente. `listingStatus: "inactive"` conserve le lien historique en source et utilise `inquiry_url` vers le profil public du vendeur pour le bouton visible. La fiche et la sélection ne renvoient plus vers l’annonce désactivée ; le balisage Offer renvoie vers la fiche du livre. La disponibilité reste un fait distinct : ADM-101 est confirmé toujours à vendre par le propriétaire le 2 novembre 2026. Son clic de profil émet `outbound_contact`, distinct de `outbound_listing`, toujours local et sans collecteur.
+
 `availability` accepte `unknown`, `available`, `reserved` et `sold`. Le statut initial est `unknown` : un lien valide ne prouve pas le stock. Afficher un état confirmé seulement après vérification réelle. Une date manuscrite de carnet n’est pas utilisée comme date d’impression dans le balisage.
 
 Après une réservation ou une vente :

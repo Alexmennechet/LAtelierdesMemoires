@@ -22,7 +22,10 @@ export function productSchema(book, site, canonical) {
     url: canonical,
     offers: {
       "@type": "Offer",
-      url: book.lb_url || canonical,
+      url:
+        book.listingStatus === "inactive"
+          ? canonical
+          : book.lb_url || canonical,
       price: book.price,
       priceCurrency: "EUR",
       itemCondition: "https://schema.org/UsedCondition",

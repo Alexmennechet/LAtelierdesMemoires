@@ -260,6 +260,36 @@ test("product schema distinguishes unconfirmed, available, reserved and sold sto
   }
 });
 
+test("an inactive listing keeps the owner's available book reachable without exposing the dead advertisement", () => {
+  const source = books.find((book) => book.id === 101);
+  const book = { ...source, images: media[source.id] };
+  assert.equal(book.availability, "available");
+  assert.equal(book.availabilitySource, "owner_confirmation");
+  assert.equal(book.listingStatus, "inactive");
+  const html = bookInfo(book);
+  assert.ok(!html.includes(book.lb_url));
+  assert.ok(html.includes(book.inquiry_url));
+  assert.ok(html.includes('data-contact="101"'));
+  assert.ok(!html.includes('data-market="101"'));
+  assert.match(html, /reste proposé à la vente/);
+  const canonical = `${site.url}/livres/${book.slug}/`;
+  const offer = productSchema(book, site, canonical).offers;
+  assert.equal(offer.url, canonical);
+  assert.equal(offer.price, 450);
+  assert.equal(offer.availability, "https://schema.org/InStock");
+  for (const status of ["sold", "reserved"]) {
+    assert.ok(
+      !marketLink({ ...book, availability: status }).includes(book.inquiry_url),
+    );
+  }
+  assert.ok(
+    !marketLink({
+      ...book,
+      inquiry_url: "https://leboncoin.fr.evil.test/",
+    }).includes("href="),
+  );
+});
+
 async function files(path) {
   const found = [];
   for (const entry of await readdir(path, { withFileTypes: true })) {
@@ -342,7 +372,11 @@ test("19 French product pages expose honest Product+Book data, prices and listin
       assert.ok(offer, `${b.id}: Offer`);
       assert.equal(Number(offer.price), b.price);
       assert.equal(offer.priceCurrency, "EUR");
-      assert.ok(html.includes(b.lb_url));
+      if (b.listingStatus === "inactive") {
+        assert.ok(html.includes(b.inquiry_url));
+        assert.equal(offer.url, site.url + path);
+        assert.ok(!html.includes(b.lb_url));
+      } else assert.ok(html.includes(b.lb_url));
     } else if (b.availability === "sold")
       assert.ok(
         nodes.every(

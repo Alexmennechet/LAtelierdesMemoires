@@ -183,6 +183,8 @@ document.addEventListener("click", (event) => {
   if (!target) return;
   if (target.matches("[data-market]"))
     track("outbound_listing", Number(target.dataset.market));
+  if (target.matches("[data-contact]"))
+    track("outbound_contact", Number(target.dataset.contact));
   if (
     target.matches("[data-open-selection]") &&
     !event.ctrlKey &&
