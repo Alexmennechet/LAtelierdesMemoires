@@ -64,7 +64,9 @@ async function overflow(label) {
   );
 }
 async function captureFull(path) {
-  for (const img of await page.locator('img[loading="lazy"]').all()) {
+  // Closed selection dialogs also contain lazy images. A page capture must
+  // decode only the images displayed in the current view, including off-screen ones.
+  for (const img of await page.locator('img[loading="lazy"]:visible').all()) {
     await img.scrollIntoViewIfNeeded();
     await img.evaluate((el) => el.decode().catch(() => {}));
   }
