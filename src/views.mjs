@@ -43,6 +43,10 @@ export function stockText(book) {
     return en
       ? "Reserved — please ask about availability."
       : "Réservé — disponibilité à reconfirmer auprès du vendeur.";
+  if (book.listingStatus === "inactive")
+    return en
+      ? `${book.availability === "available" ? "This copy is still offered for sale. " : ""}Visit the seller’s Leboncoin profile and quote Ref. ADM-${book.id}.`
+      : `${book.availability === "available" ? "Cet exemplaire reste proposé à la vente. " : ""}Retrouvez le vendeur sur son profil Leboncoin en précisant la référence ADM-${book.id}.`;
   return en
     ? "Availability and delivery costs must be confirmed on the listing."
     : "Disponibilité et frais de livraison à confirmer sur l’annonce.";
@@ -51,9 +55,10 @@ export function marketLink(book, label) {
   if (!isPurchasable(book))
     return `<p class="stock-status" role="status">${stockText(book)}</p>`;
   const en = english(book),
-    href = marketUrl(book.lb_url);
+    inquiry = book.listingStatus === "inactive",
+    href = marketUrl(inquiry ? book.inquiry_url : book.lb_url);
   return href
-    ? `<a class="button market" href="${e(href)}" target="_blank" rel="noopener noreferrer" data-market="${book.id}">${e(label || (en ? "Ask the seller on Leboncoin" : "Consulter l’annonce Leboncoin"))}<span class="sr-only"> ${en ? "(new tab)" : "(nouvel onglet)"}</span><span aria-hidden="true"> ↗</span></a>`
+    ? `<a class="button market" href="${e(href)}" target="_blank" rel="noopener noreferrer" ${inquiry ? "data-contact" : "data-market"}="${book.id}">${e(inquiry ? (en ? "View the seller’s Leboncoin profile" : "Voir le profil du vendeur sur Leboncoin") : label || (en ? "Ask the seller on Leboncoin" : "Consulter l’annonce Leboncoin"))}<span class="sr-only"> ${en ? "(new tab)" : "(nouvel onglet)"}</span><span aria-hidden="true"> ↗</span></a>`
     : `<p>${en ? "Listing link unavailable." : "Lien de l’annonce indisponible."}</p>`;
 }
 export function bookInfo(book, heading = "h1") {

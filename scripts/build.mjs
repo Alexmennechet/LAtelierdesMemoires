@@ -29,6 +29,13 @@ for (const book of sourceBooks) {
     throw Error(`Invalid identity or status: ${book.id}`);
   if (!Array.isArray(media[book.id]) || !media[book.id].length)
     throw Error(`Missing gallery: ${book.id}`);
+  if (
+    book.listingStatus !== undefined &&
+    !["inactive", "published", "unverified"].includes(book.listingStatus)
+  )
+    throw Error(`Invalid listing status: ${book.id}`);
+  if (book.listingStatus === "inactive" && !marketUrl(book.inquiry_url))
+    throw Error(`Missing safe seller contact: ${book.id}`);
   for (const image of media[book.id]) {
     if (!Array.isArray(image.variants) || !image.variants.length)
       throw Error(`Missing image variants: ${book.id}`);
