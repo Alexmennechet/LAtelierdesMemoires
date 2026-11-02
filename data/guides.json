@@ -12,5 +12,12 @@
     "title": "Observer l’état d’un livre ancien avant l’achat",
     "description": "Les vues utiles pour examiner reliure, pages et illustrations, sans confondre beau décor, édition et complétude.",
     "relatedBookIds": [117, 116]
+  },
+  {
+    "slug": "cartonnages-illustres",
+    "file": "guide-cartonnages-illustres.md",
+    "title": "Cartonnages illustrés : regarder le décor d’un livre ancien",
+    "description": "Couleurs, motifs et décors dorés : comprendre les cartonnages d’éditeur et comparer les vues d’un exemplaire avant l’achat.",
+    "relatedBookIds": [108, 113, 114]
   }
 ]

@@ -1,6 +1,6 @@
 # L’Atelier des Mémoires
 
-Catalogue statique de 19 exemplaires avec fiches françaises individuelles, sélection personnelle, 100 photographies des nouveautés, trois descriptions anglaises et deux guides bibliographiques. Les transactions et la prise de contact ont lieu sur Leboncoin.
+Catalogue statique de 19 exemplaires avec fiches françaises individuelles, sélection personnelle, 100 photographies des nouveautés, trois descriptions anglaises et trois guides bibliographiques. Les transactions et la prise de contact ont lieu sur Leboncoin.
 
 ## Construire et vérifier
 
@@ -66,3 +66,26 @@ Le build préserve le fichier de validation Google, produit un sitemap avec les 
 Les en-têtes Netlify limitent les ressources à l’origine du site. Le lien de déploiement immuable permet les tests sans la barre de commentaires injectée dans les Deploy Previews, qui n’appartient pas au site. Pour revenir à une version antérieure, rétablir le commit ou le déploiement connu puis vérifier les URL et les données.
 
 L’avancement des 32 recommandations et les dépendances externes sont détaillés dans `SUIVI-SEO.md`.
+
+## Signaler une modification avec IndexNow
+
+Le build publie le fichier texte de vérification défini dans `data/indexnow.json`. Cette clé propre au protocole est exposée publiquement pour la vérification du site ; elle n'est ni un jeton d'administration GitHub/Netlify ni une clé de compte. Ne pas y placer un identifiant privé d'un autre service.
+
+Après une publication **réellement nouvelle ou modifiée**, nommer uniquement ses chemins canoniques. Par exemple, pour la livraison du guide sur les cartonnages et de l'index des guides :
+
+```sh
+npm run build
+npm run indexnow -- /guides/ /guides/cartonnages-illustres/
+```
+
+Cette simulation n'effectue aucune requête. Une fois le déploiement confirmé, effectuer un envoi explicite :
+
+```sh
+npm run indexnow -- --submit /guides/ /guides/cartonnages-illustres/
+```
+
+Le script vérifie la clé et le contenu exact de chaque page en production avant **un seul lot** vers l'endpoint global IndexNow. Il refuse les pages hors sitemap, les pages noindex et les chemins non canoniques. Le journal local ignoré `.indexnow/submissions.json` distingue les réceptions HTTP 200, les réceptions 202 avec validation en attente et les erreurs. Une page identique déjà reçue est ignorée lors d'un second lancement. Conserver ce journal sur le poste qui réalise les soumissions ; il n'est pas partagé entre postes et ne suffit pas à détecter tous les envois effectués ailleurs.
+
+Ne pas passer les 35 anciennes URL par défaut ni relancer les mêmes envois en boucle. La détection de changement porte sur les octets de la page, pas sur son sens : l'opérateur doit sélectionner des changements de contenu utiles, pas les seules retouches de présentation. Le sitemap sert à la découverte de l'historique. En cas de 429, le script s'arrête et conserve Retry-After ; aucun contournement, nouvel endpoint ni nouvelle clé ne doit servir à multiplier les demandes. Un envoi reçu n'est pas une page indexée. IndexNow complète le sitemap ; il ne remplace pas le suivi Search Console.
+
+Ce mécanisme ne collecte aucune donnée visiteur et n'ajoute aucun appel réseau dans les pages. Il n'est pas exécuté automatiquement lors du build, des tests, des previews ou sur un calendrier. Sources : [protocole](https://www.indexnow.org/documentation), [bonnes pratiques](https://www.indexnow.org/faq).

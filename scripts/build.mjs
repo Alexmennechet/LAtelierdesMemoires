@@ -17,6 +17,8 @@ export const site = await readJson("data/site.json");
 const sourceBooks = await readJson("data/books.json");
 const media = await readJson("data/media.json");
 const translations = await readJson("data/en.json");
+const indexNow = await readJson("data/indexnow.json");
+if (!/^[a-f0-9]{32}$/.test(indexNow.key)) throw Error("Invalid IndexNow key");
 const statuses = new Set(["unknown", "available", "reserved", "sold"]);
 for (const book of sourceBooks) {
   if (
@@ -92,6 +94,7 @@ const version = createHash("sha256")
   .slice(0, 12);
 await rm(out, { recursive: true, force: true });
 await mkdir(out, { recursive: true });
+await writeFile(join(out, `${indexNow.key}.txt`), indexNow.key, "utf8");
 await cp(join(root, "assets"), join(out, "assets"), { recursive: true });
 // Preserve the exact published WebP bytes and URLs of the 100 new photographs.
 for (const src of new Set(

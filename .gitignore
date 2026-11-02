@@ -3,3 +3,4 @@ node_modules/
 test-results/
 media-review.jpg
 .netlify/
+.indexnow/
