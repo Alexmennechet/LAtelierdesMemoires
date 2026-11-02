@@ -30,8 +30,8 @@ Les 32 recommandations ont été acceptées. Ce lot traite le socle technique et
 | A24 | Implémenté | Pilote anglais des références 108, 113 et 118 ; contact et livraison explicités |
 | A25 | Implémenté | Canonicals et hreflang fr/en des trois traductions complètes |
 | A26 | Implémenté | Sélecteur par liens, sans redirection IP |
-| A27 | À configurer dans le compte Bing | Nécessite une session propriétaire et éventuellement une autorisation d’accès ; protocole préparé |
-| A28 | Implémenté | Deux guides sur les dates et sur l’observation de l’état, avec exemples et sources BnF |
+| A27 | Propriété Bing vérifiée ; IndexNow ciblé ajouté | Fichier de vérification et commande avec simulation, vérification de production et protection contre les répétitions ; réception et indexation à distinguer. Le formulaire Bing du sitemap reste en erreur serveur au dernier contrôle |
+| A28 | Implémenté | Trois guides sur les dates, l’état et les cartonnages illustrés, avec exemples et sources patrimoniales |
 | A29 | Préparé, travail éditorial externe restant | Aucun message à un tiers envoyé ; développer des liens pertinents exige des démarches réelles |
 | A30 | Pilote chinois conditionnel | Traduction relue, demande, accès depuis les réseaux chinois et vente internationale à valider |
 | A31 | À configurer lors du pilote chinois | Compte propriétaire Baidu et diagnostic local requis ; aucune soumission ou indexation garantie |

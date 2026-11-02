@@ -107,6 +107,8 @@ try {
     "/selection/",
     "/contact/",
     "/livraison/",
+    "/guides/",
+    "/guides/cartonnages-illustres/",
     "/en/",
     "/en/contact-shipping/",
     ...pilotIds.map(
