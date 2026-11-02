@@ -19,8 +19,8 @@ for (const [id, [price, photos]] of Object.entries(expected)) {
   assert.equal(book.price, price, id);
   assert.equal(book.images.length, photos, id);
   assert.equal(book.thumbnails.length, photos, id);
-  assert.equal(book.lb_url, null, id);
-  assert.ok(book.desc.includes('Annonce Leboncoin à venir'));
+  assert.match(book.lb_url, /^https:\/\/www\.leboncoin\.fr\/ad\/[a-z_]+\/\d+$/, id);
+  assert.ok(!book.desc.includes('Annonce Leboncoin à venir'), id);
   assert.equal(book.img, book.images[0]);
   assert.equal(new Set(book.images).size, photos);
   total += price; count += photos;
@@ -31,6 +31,7 @@ for (const [id, [price, photos]] of Object.entries(expected)) {
 }
 assert.equal(total, 322);
 assert.equal(count, 100);
+assert.equal(new Set(books.map(b => b.lb_url)).size, books.length);
 assert.ok(!scripts[0].includes('schema.org/InStock'));
 const sandbox = { URL };
 vm.runInNewContext(scripts[0].slice(scripts[0].indexOf('function safeUrl('), scripts[0].indexOf('let cart =')), sandbox);
