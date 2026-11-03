@@ -375,7 +375,11 @@ async function page(config) {
   if (!config.noindex)
     pages.push({
       path: config.path,
-      lastmod: config.guide?.updated || config.book?.updated || site.updated,
+      lastmod:
+        config.lastmod ||
+        config.guide?.updated ||
+        config.book?.updated ||
+        site.updated,
       book: config.book,
     });
 }
@@ -466,17 +470,88 @@ await page({
       </div>
     </section>`,
 });
+const catalogEditorialDate = "2026-11-03";
+const editorial = new Map([
+  [
+    101,
+    {
+      title:
+        "Carnet manuscrit illustré de 1918 – croquis militaires et de mode",
+      photos: [0, 3, 6],
+    },
+  ],
+  [
+    102,
+    {
+      title: "Notre Belle Patrie – J. Monnier, Hachette 1911, 104 gravures",
+      photos: [1, 0],
+    },
+  ],
+  [
+    104,
+    {
+      title: "Contes bleus – Édouard Laboulaye, illustrés par Yan’ Dargent",
+      photos: [3, 2, 4],
+    },
+  ],
+  [
+    108,
+    {
+      title: "Berthe ou Le Devoir accompli – Pierre Dartois, Mégard 1893",
+      photos: [2, 0, 4],
+    },
+  ],
+  [
+    113,
+    {
+      title:
+        "Nils Holgersson – Selma Lagerlöf, Delagrave 1949, Roger Reboussin",
+      photos: [2, 1, 6],
+    },
+  ],
+  [
+    118,
+    {
+      title: "Quentin Durward – Armand Colin 1934, illustré par Albert Robida",
+      photos: [4, 5, 0],
+    },
+  ],
+]);
+const illustratedIds = [104, 107, 113, 118, 119, 121];
+const prizeIds = [110, 111, 112, 117, 118];
+const cartonnageGuide = "/guides/cartonnages-illustres/";
+const catalogLinks = (ids) =>
+  ids
+    .map((id) => {
+      const book = books.find((entry) => entry.id === id);
+      return `<li><a href="${bookPath(book)}">${e(book.title)}</a></li>`;
+    })
+    .join("");
 const categories = [...new Set(books.map((b) => b.category))];
 await page({
   path: "/boutique/",
-  title: "La boutique de livres anciens",
+  title: "Livres anciens à vendre",
+  lastmod: catalogEditorialDate,
   description:
-    "Parcourez les ouvrages de la collection : histoire, documents, contes, romans et biographies. Recherchez un titre ou un auteur et consultez les photographies.",
+    "Catalogue de livres anciens, romans illustrés, cartonnages et manuscrits. Consultez les photos, les éditions et les prix avant d’ouvrir l’annonce Leboncoin.",
   body: /* HTML */ `<section class="container section">
     <div class="page-heading">
       <p class="eyebrow">Livres & manuscrits</p>
-      <h1>La Boutique</h1>
-      <p>Un titre, une époque, une découverte.</p>
+      <h1>Catalogue de livres anciens</h1>
+      <p>
+        Parcourez des romans et contes illustrés, des cartonnages d’éditeur, des
+        livres de prix et des documents manuscrits. Chaque fiche présente les
+        photographies de l’exemplaire, les indications d’édition et son prix
+        hors livraison.
+      </p>
+      <p>
+        Pour acheter, ouvrez l’annonce Leboncoin depuis la fiche et vérifiez la
+        disponibilité et les modalités de remise.
+      </p>
+      <p>
+        <a href="#livres-anciens-illustres">Livres anciens illustrés</a> ·
+        <a href="#livres-de-prix">Livres de prix anciens</a>
+      </p>
     </div>
     <form class="catalog-controls" id="catalog-form" role="search" hidden>
       <div>
@@ -508,17 +583,43 @@ await page({
       <p>Essayez un autre titre, un auteur ou une catégorie.</p>
       <button class="button" data-reset>Afficher tous les ouvrages</button>
     </div>
+    <section class="related-section" aria-labelledby="livres-anciens-illustres">
+      <h2 id="livres-anciens-illustres">Livres anciens illustrés</h2>
+      <p>
+        Comparez les illustrations, les pages de titre et les reliures de ces
+        romans et recueils. Les fiches indiquent les détails relevés pour chaque
+        édition.
+      </p>
+      <ul>
+        ${catalogLinks(illustratedIds)}
+      </ul>
+    </section>
+    <section class="related-section" aria-labelledby="livres-de-prix">
+      <h2 id="livres-de-prix">Livres de prix anciens</h2>
+      <p>
+        Les exemplaires ci-dessous portent une étiquette ou une inscription de
+        récompense scolaire. Consultez le
+        <a href="${cartonnageGuide}">guide des cartonnages illustrés</a> pour
+        distinguer le décor de la reliure et les marques d’attribution.
+      </p>
+      <ul>
+        ${catalogLinks(prizeIds)}
+      </ul>
+    </section>
   </section>`,
 });
-for (const book of books)
+for (const book of books) {
+  const detail = editorial.get(book.id);
   await page({
     path: bookPath(book),
     active: "/boutique/",
-    title: book.title,
-    description:
-      `${book.title}. ${book.description.split("\n")[0]}`
-        .slice(0, 157)
-        .replace(/\s+\S*$/, "") + "…",
+    title: detail?.title || book.title,
+    lastmod: detail && [catalogEditorialDate, book.updated].sort().at(-1),
+    description: detail
+      ? book.edition
+      : `${book.title}. ${book.description.split("\n")[0]}`
+          .slice(0, 157)
+          .replace(/\s+\S*$/, "") + "…",
     book,
     body: /* HTML */ `<div class="container section">
       <nav class="breadcrumbs" aria-label="Fil d’Ariane">
@@ -530,11 +631,35 @@ for (const book of books)
         ${gallery(book, true)}
         <div class="product-info">${bookInfo(book)}</div>
       </article>
+      ${
+        detail
+          ? `<section class="related-section" aria-labelledby="photo-details">
+        <h2 id="photo-details">Détails visibles sur les photographies</h2>
+        <ul>${detail.photos
+          .map((index) => {
+            const photo = book.images[index];
+            return `<li><a href="${e(photo.variants.at(-1).src)}">${e(photo.alt)}</a></li>`;
+          })
+          .join("")}</ul>
+      </section>`
+          : ""
+      }
+      ${illustratedIds.includes(book.id) ? '<p><a href="/boutique/#livres-anciens-illustres">Voir les livres anciens illustrés</a></p>' : ""}
+      ${prizeIds.includes(book.id) ? '<p><a href="/boutique/#livres-de-prix">Voir les livres de prix anciens</a></p>' : ""}
       <section class="related-section" aria-labelledby="related-title">
         <h2 id="related-title">Poursuivre la découverte</h2>
         <div class="book-grid">
           ${books
-            .filter((b) => b.id !== book.id)
+            .filter(
+              (b) =>
+                b.id !== book.id &&
+                !["sold", "reserved"].includes(b.availability),
+            )
+            .sort(
+              (a, b) =>
+                Number(b.category === book.category) -
+                Number(a.category === book.category),
+            )
             .slice(0, 3)
             .map(card)
             .join("")}
@@ -542,6 +667,7 @@ for (const book of books)
       </section>
     </div>`,
   });
+}
 await page({
   path: "/a-propos/",
   title: "À propos de l’Atelier",
@@ -824,7 +950,9 @@ for (const guide of guides) {
       .map((id) => books.find((b) => b.id === id))
       .filter(Boolean)
       .map((b) => `<li><a href="${bookPath(b)}">${e(b.title)}</a></li>`)
-      .join("")}</ul></article>`,
+      .join(
+        "",
+      )}</ul>${guide.slug === "cartonnages-illustres" ? '<p><a href="/boutique/#livres-de-prix">Voir les livres de prix du catalogue</a> · <a href="/boutique/#livres-anciens-illustres">Voir les livres anciens illustrés</a></p>' : ""}</article>`,
   });
 }
 await buildEnglish({ page, site, books, translations });

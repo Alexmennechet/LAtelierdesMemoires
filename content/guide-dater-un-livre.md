@@ -19,3 +19,9 @@ Une dédicace, une signature ou la formule « offert par » nécessitent égalem
 Comparez les mentions visibles avec une notice bibliographique de la même édition : éditeur, collection, illustrateur et rang d’édition. Une correspondance probable doit rester présentée comme telle. Si les éléments sont insuffisants, la mention « année à confirmer » est préférable à une date précise déduite du seul titre de l’œuvre.
 
 Pour examiner un achat, demandez une vue nette de la page de titre et, si nécessaire, de son verso. Une photographie de la couverture seule ne permet pas de trancher toutes les questions bibliographiques.
+
+## Reconnaître un livre rare ou recherché
+
+Identifiez d’abord l’édition précise, puis ce qui distingue l’exemplaire. Une édition peu courante et un exemplaire particulier sont deux formes de rareté. Une reliure documentée, des annotations identifiables ou une provenance étayée peuvent distinguer deux volumes issus de la même édition. La [Réserve des livres rares de la BnF](https://www.bnf.fr/fr/reserve-des-livres-rares) présente des exemples de ces critères de sélection.
+
+Pour savoir si une édition est recherchée, comparez les ventes conclues pour le même éditeur, le même tirage et un état comparable. Un prix demandé donne un repère. Une adjudication documentée renseigne sur une transaction précise. Pour un livre illustré, vérifiez quelles planches appartiennent à cette édition avant de comparer les prix.

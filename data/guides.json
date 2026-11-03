@@ -6,7 +6,7 @@
     "description": "Distinguer date de publication, réédition, inscription et prix scolaire, avec des exemples photographiés du catalogue.",
     "relatedBookIds": [102, 118],
     "published": "2026-11-02",
-    "updated": "2026-11-02",
+    "updated": "2026-11-03",
     "illustration": {
       "bookId": 102,
       "imageIndex": 1,
@@ -34,7 +34,7 @@
     "description": "Couleurs, motifs et décors dorés : comprendre les cartonnages d’éditeur et comparer les vues d’un exemplaire avant l’achat.",
     "relatedBookIds": [108, 113, 114],
     "published": "2026-11-02",
-    "updated": "2026-11-02",
+    "updated": "2026-11-03",
     "illustration": {
       "bookId": 108,
       "imageIndex": 0,
