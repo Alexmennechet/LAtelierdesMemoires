@@ -262,7 +262,13 @@ test("product schema distinguishes unconfirmed, available, reserved and sold sto
 
 test("an inactive listing keeps the owner's available book reachable without exposing the dead advertisement", () => {
   const source = books.find((book) => book.id === 101);
-  const book = { ...source, images: media[source.id] };
+  const book = {
+    ...source,
+    images: media[source.id],
+    listingStatus: "inactive",
+    lb_url: "https://www.leboncoin.fr/ad/antiquites/3033445664",
+    inquiry_url: "https://www.leboncoin.fr/profile/4f60d5f4-9c2d-4430-b46f-9f022a51618f",
+  };
   assert.equal(book.availability, "available");
   assert.equal(book.availabilitySource, "owner_confirmation");
   assert.equal(book.listingStatus, "inactive");
